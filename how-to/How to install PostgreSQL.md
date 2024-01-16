@@ -14,7 +14,7 @@ PostgreSQL - это реляционная СУБД с открытым исхо
 ### Installation
 Перейти по ссылке<br>
 https://www.enterprisedb.com/downloads/postgres-postgresql-downloads<br>
-Выбрать версию 12.2 и ОС Windows x86-64 или	Windows x86-32 и нажать Download
+Выбрать версию 16.1 и ОС Windows x86-64 и нажать Download
 <ol>
 <li>Запустить исполняемый файл.</li><br>
 <li>Выбрать директорию установки и нажать Next 3 раза.</li><br>
@@ -24,7 +24,7 @@ https://www.enterprisedb.com/downloads/postgres-postgresql-downloads<br>
 
 ### Launch
 <ol>
-<li>Переходим в Меню Пуск — > PostgreSQL 12 -> pgAdmin 4.</li><br>
+<li>Переходим в Меню Пуск — > PostgreSQL 16.1 -> pgAdmin 4.</li><br>
 <li>Вводим пароль суперпользователя.</li>
 </ol>
 
@@ -34,7 +34,7 @@ https://www.enterprisedb.com/downloads/postgres-postgresql-downloads<br>
 ### Installation
 Перейти по ссылке<br>
 https://www.enterprisedb.com/downloads/postgres-postgresql-downloads<br>
-Выбрать версию 12.2 и ОС Mac OS X и нажать Download
+Выбрать версию 16.1 и ОС Mac OS X и нажать Download
 <ol>
 <li>Запустить исполняемый файл.</li><br>
 <li>Нажать "Открыть" если появится предупреждение об открытии файла из сети интернет и ввести пароль для учетной записи пользователя Mac OS</li><br>
@@ -59,7 +59,7 @@ sudo apt-get update
 ```
 Устанавливаем приложение
 ```
-sudo apt-get install postgresql-12
+sudo apt-get install postgresql-16.1
 ```
 
 ### Launch
