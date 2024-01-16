@@ -57,7 +57,7 @@
 1. [Введение в Базы Данных](https://stepik.org/course/551/) (Русский)
 2. [Хранилище данных vs Озеро Данных](https://habr.com/ru/post/485180/) (Русский)
 
-### Практика
+### Практика 2.1
 
 1. Вам необходимо установить Postgres базу данных к себе на компьютер. Вы можете посмотреть [инструкции по установки Postgres](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/how-to/How%20to%20install%20PostgreSQL.md).
 
@@ -79,11 +79,11 @@
 8. [Интерактивный тренажер по SQL](https://stepik.org/course/63054/) (Русский)
 9. [Лучшие вопросы средней сложности по SQL на собеседовании аналитика данных](https://habr.com/ru/company/dcmiran/blog/500360/) (Русский)
 
-### Практика
+### Практика 2.2
 
-1. Вам необходимо установить клиент SQL для подключения базы данных. Вы можете посмотреть [инструкции по установки DBeaver](https://github.com/Data-Learn/data-engineering/blob/master/how-to/%20How%20to%20install%20DBeaver.md). Так же вы можете использовать любой другой клиент для подключения к ваше БД.
-2. Создайте 3 таблицы и загрузите данные из [Superstore Excel файл](https://github.com/Data-Learn/data-engineering/blob/master/DE-101%20Modules/Module01/DE%20-%20101%20Lab%201.1/Sample%20-%20Superstore.xls) в вашу базу данных. Сохраните в вашем GitHub скрипт загрузки данных и создания таблиц. Вы можете использовать готовый [пример sql файлов](https://github.com/Data-Learn/data-engineering/tree/master/DE-101%20Modules/Module02/DE%20-%20101%20Lab%202.1).
-3. Напишите запросы, чтобы ответить на вопросы из [Модуля 01](https://github.com/Data-Learn/data-engineering/tree/master/DE-101%20Modules/Module01/DE%20-%20101%20Lab%201.1#%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0-%D0%B2-excel). Сохраните в вашем GitHub скрипт загрузки данных и создания таблиц.
+1. Вам необходимо установить клиент SQL для подключения базы данных. Вы можете посмотреть [инструкции по установки DBeaver](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/how-to/How%20to%20install%20DBeaver.md). Так же вы можете использовать любой другой клиент для подключения к ваше БД.
+2. Создайте 3 таблицы и загрузите данные из [Superstore Excel файл](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/modules/Module01/Lab%201.1/Sample%20-%20Superstore.xls) в вашу базу данных. Сохраните в вашем GitHub скрипт загрузки данных и создания таблиц. Вы можете использовать готовый [пример sql файлов](https://github.com/BosenkoTM/Data-Engineering-Platforms/tree/master/modules/Module02).
+3. Напишите запросы, чтобы ответить на вопросы из [Модуля 01](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/modules/Module01/Lab%201.1/readme.md#%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0-%D0%B2-excel). Сохраните в вашем GitHub скрипт загрузки данных и создания таблиц.
 
 ## 2.4: Модели Данных
 
@@ -96,7 +96,7 @@
 1. Статья про Хранилище Данных [Антихрупкость архитектуры хранилищ данных](https://habr.com/ru/post/281553/)
 2. Статья про Data Vault [Основы Data Vault](https://habr.com/ru/post/502968/)
 
-### Практика
+### Практика 2.3
 
 1. Вам необходимо нарисовать модель данных для нашего файлика [Superstore](https://github.com/Data-Learn/data-engineering/blob/master/DE-101%20Modules/Module01/DE%20-%20101%20Lab%201.1/Sample%20-%20Superstore.xls):
 
@@ -121,7 +121,7 @@
 1. Лекции на Coursera [Google IT Support Professional](https://www.coursera.org/professional-certificates/google-it-support) (English)
 2. [Шпаргалка системного администратора по сетевым инструментам Linux](https://habr.com/ru/company/ruvds/blog/417485/) (Русский)
 
-### Практика
+### Практика 2.4
 
 1. Вам необходимо [создать учетную запись в AWS](https://github.com/Data-Learn/data-engineering/blob/master/how-to/How%20to%20create%20AWS%20Account.md). Это бесплатно. Если вы запускаете сервис в AWS, не забудьте его удалить, когда он не нужен, а то могут и денюшку списать.
 2. Используя сервис AWS Lightsail или [AWS RDS (смотрите инструкцию)](https://github.com/Data-Learn/data-engineering/blob/master/how-to/how_to_amazon_rds.md) создайте БД Postgres и активируйте **Public access**
@@ -150,19 +150,6 @@
 5. [AARRR воронка — модель «Пиратские метрики» + фреймворк AAARRR](https://leadstartup.ru/db/aarrr) (Русский)
 6. [Обзор книги «Lean Analytics»](https://gopractice.ru/lean_analytics/) (Русский)
 
-### Практика
+### Домашнее задание
 
-В качестве домашнего задания вам необходимо создать дашборд в одном из решений, которые мы рассмотрели. ДЛя идей можно использовать задание из 1го модуля. Данные должны быть в Postgres в AWS и вы сможете подключиться сервисом к БД и создать несколько отчетов. Для практики можно и во всех 3х создать.
-
-# Опрос Модуль 2
-
-Пожалуйста пройдите [опрос по завершении Модуля 2](https://forms.gle/GX2jPuvBxDNXa5dU9). Так я смогу посмотреть, сколько человек закончило модуль, что было хорошо, а что можно улучшить.
-
-По окончанию модуля 2, вы можете расшарить значок `02 | DATABASE` в социальных сетях и рассказать о своих достижениях.
-
-![img](https://github.com/Data-Learn/data-engineering/blob/master/img/de101-module02.png)
-
-**PS Если материал оказался полезным, вы можете поддержать авторов через**
-Условная цена одного модуля 500р ;)
-
-[ЮMoney](https://yoomoney.ru/to/4100116864248269) или [Patreon](https://www.patreon.com/dmitryanoshin) или [Paypal](https://paypal.me/dmitryanoshin)
+В качестве домашнего задания вам необходимо создать дашборд в одном из решений, которые мы рассмотрели. ДЛя идей можно использовать задание из 1го модуля. Данные должны быть в Postgres, создать несколько отчетов. Для практики можно и во всех 3х создать.
