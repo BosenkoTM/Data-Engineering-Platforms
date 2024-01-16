@@ -1,6 +1,6 @@
 # Модуль 2: Базы данных и SQL
 
-[Обратно в содержание курса :leftwards_arrow_with_hook:](https://github.com/Data-Learn/data-engineering/blob/master/DE%20-%20101%20Guide.md)
+[Обратно в содержание курса :leftwards_arrow_with_hook:](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/readme.md)
 
 Познакомимся с базами данных, и поймем их преимущество для работы с данными по сравнению с Excel/Google Sheets.
 
@@ -18,7 +18,6 @@
 
 Дальше мы будем учиться загружать и извлекать данные в БД, использовать язык SQL.
 
-**Видео лекция** - [Введение](https://youtu.be/GFgKx4XodMU)
 
 ## 2.2: Что такое базы данных и как они помогают при работе с данными
 
@@ -49,9 +48,9 @@
 
 В практической части мы скачаем и установим PostgreSQL, в следующей главе мы будем к нему подключаться и рассмотрим, какие способы подключения существуют.
 
-**Видео лекция часть 1 - теория** - [Что такое база данных](https://youtu.be/Y8kAHcpImNA).
+**часть 1 - теория** - [Что такое база данных]().
 
-**Видео лекция часть 2 - практика** [Установка Postgres](https://www.youtube.com/watch?v=Y8kAHcpImNA&t=507s).
+**часть 2 - практика** [Установка Postgres]().
 
 ### Дополнительные материалы для изучения
 
@@ -60,7 +59,7 @@
 
 ### Практика
 
-1. Вам необходимо установить Postgres базу данных к себе на компьютер. Вы можете посмотреть [инструкции по установки Postgres](https://github.com/Data-Learn/data-engineering/blob/master/how-to/How%20to%20install%20PostgreSQL.md).
+1. Вам необходимо установить Postgres базу данных к себе на компьютер. Вы можете посмотреть [инструкции по установки Postgres](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/how-to/How%20to%20install%20PostgreSQL.md).
 
 ## 2.3: Подключение к Базам Данных и SQL
 
