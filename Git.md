@@ -1,8 +1,6 @@
 # Git Webinar Notes
 
-> [Denis Volk, PhD, Senior Data Scientist](https://sites.google.com/site/denissergeevichvolk/)
->
-> 2021-01-25
+> 2024-01-10
 
 ## Ответы на вопросы
 **_Можно ли просто скачать репозиторий с Github?_**
