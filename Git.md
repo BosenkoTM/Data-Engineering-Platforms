@@ -64,9 +64,3 @@ _Settings_ -> _Options_ -> В самом низу страницы красны�
 
 Чтобы квадратики закрашивались правильно, нужно, чтобы ваш емейл, указанный в настройках локального гита, совпадал в емейлом профиля на github: [Why are my contributions not showing up on my profile?](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile#your-local-git-commit-email-isnt-connected-to-your-account)
 
-## Git cheat sheet
-
-WIP
-
-## Git Octocat
-![Octocat](https://github.githubassets.com/images/modules/logos_page/Octocat.png)
