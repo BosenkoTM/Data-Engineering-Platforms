@@ -7,8 +7,8 @@
 - [Модуль 02 - Базы данных и SQL](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/modules/Module02/readme.md). ![Ready](https://img.shields.io/badge/-ready-green)
 - [Модуль 03 - Business Intelligence](https://github.com/BosenkoTM/Data-Engineering-Platforms/tree/master/modules/Module03#%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8C-3-%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D0%B4%D0%B0%D1%88%D0%B1%D0%BE%D1%80%D0%B4%D1%8B-%D0%B8-%D0%BE%D1%82%D1%87%D0%B5%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%8C---business-intelligence). ![Ready](https://img.shields.io/badge/-ready-green) 
 - [Модуль 04 - Интеграция и трансформация данных - ETL и ELT](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/modules/Module04/readme.md#%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8C-4--%D0%B8%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D0%B8-%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8F-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85---etl-%D0%B8-elt). ![Ready](https://img.shields.io/badge/-ready-green) 
-- [Модуль 05 - Cloud Computing](). ![In Process](https://img.shields.io/badge/-in%20process-yellow)
-- [Модуль 06 - Аналитические Хранилища Данных](). ![In Process](https://img.shields.io/badge/-in%20process-yellow)
+- [Модуль 05 - Cloud Computing](http://95.131.149.21/moodle/course/view.php?id=18#section-5). ![Ready](https://img.shields.io/badge/-ready-green)
+- [Модуль 06 - Аналитические Хранилища Данных](https://github.com/BosenkoTM/Data-Engineering-Platforms/tree/master/modules/Module06#%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8C-6--%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5-%D1%85%D1%80%D0%B0%D0%BD%D0%B8%D0%BB%D0%B8%D1%89%D0%B0-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85). ![Ready](https://img.shields.io/badge/-ready-green)
 - [Модуль 07 - Знакомство с Apache Spark](). ![In Process](https://img.shields.io/badge/-in%20process-yellow)
 
 ## Требования
