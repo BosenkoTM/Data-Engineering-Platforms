@@ -160,7 +160,7 @@
 
 
 ### Лабораторная работа 4.3
-1.Выполнить один из tutorial для `fancy etl`:
+1. Выполнить один из tutorial для `fancy etl`:
  - [Apache Airflow tutorial](https://airflow.apache.org/docs/apache-airflow/stable/tutorial.html) и [Airflow tutorial 1: Introduction to Apache Airflow](https://youtu.be/AHMm1wfGuHE)
  - [Apache Nifi tutorial](https://nifi.apache.org/docs/nifi-docs/html/getting-started.html)
  - [dbt tool tutorial](https://docs.getdbt.com/docs/introduction/) и [dbt (data build tool) Tutorial from Fishtown Analytics](https://youtu.be/M8oi7nSaWps)
