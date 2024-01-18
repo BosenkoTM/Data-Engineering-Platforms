@@ -57,9 +57,9 @@
 1. [Введение в Базы Данных](https://stepik.org/course/551/) (Русский)
 2. [Хранилище данных vs Озеро Данных](https://habr.com/ru/post/485180/) (Русский)
 
-### Практика 2.1
+### Лабораторная работа 2.1
 
-1. Вам необходимо установить Postgres базу данных к себе на компьютер. Вы можете посмотреть [инструкции по установки Postgres](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/how-to/How%20to%20install%20PostgreSQL.md).
+1. Установить Postgres базу данных на компьютер. [Инструкции по установки Postgres](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/how-to/How%20to%20install%20PostgreSQL.md).
 
 ## 2.3: Подключение к Базам Данных и SQL
 
@@ -79,10 +79,10 @@
 8. [Интерактивный тренажер по SQL](https://stepik.org/course/63054/) (Русский)
 9. [Лучшие вопросы средней сложности по SQL на собеседовании аналитика данных](https://habr.com/ru/company/dcmiran/blog/500360/) (Русский)
 
-### Практика 2.2
+### Лабораторная работа 2.2
 
-1. Вам необходимо установить клиент SQL для подключения базы данных. Вы можете посмотреть [инструкции по установки DBeaver](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/how-to/How%20to%20install%20DBeaver.md). Так же вы можете использовать любой другой клиент для подключения к ваше БД.
-2. Создайте 3 таблицы и загрузите данные из [Superstore Excel файл](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/modules/Module01/Lab%201.1/Sample%20-%20Superstore.xls) в вашу базу данных. Сохраните в вашем GitHub скрипт загрузки данных и создания таблиц. Вы можете использовать готовый [пример sql файлов](https://github.com/BosenkoTM/Data-Engineering-Platforms/tree/master/modules/Module02).
+1. Установить клиент SQL для подключения базы данных. [Инструкции по установки DBeaver](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/how-to/How%20to%20install%20DBeaver.md). Так же вы можете использовать любой другой клиент для подключения к ваше БД.
+2. Создать 3 таблицы и загрузите данные из [Superstore Excel файл](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/modules/Module01/Lab%201.1/Sample%20-%20Superstore.xls) в базу данных. Сохраните в  GitHub скрипт загрузки данных и создания таблиц. Вы можете использовать готовый [пример sql файлов](https://github.com/BosenkoTM/Data-Engineering-Platforms/tree/master/modules/Module02).
 3. Напишите запросы, чтобы ответить на вопросы из [Модуля 01](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/modules/Module01/Lab%201.1/readme.md#%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0-%D0%B2-excel). Сохраните в вашем GitHub скрипт загрузки данных и создания таблиц.
 
 ## 2.4: Модели Данных
@@ -96,17 +96,17 @@
 1. Статья про Хранилище Данных [Антихрупкость архитектуры хранилищ данных](https://habr.com/ru/post/281553/)
 2. Статья про Data Vault [Основы Data Vault](https://habr.com/ru/post/502968/)
 
-### Практика 2.3
+### Лабораторная работа 2.3
 
-1. Вам необходимо нарисовать модель данных для нашего файлика [Superstore](https://github.com/Data-Learn/data-engineering/blob/master/DE-101%20Modules/Module01/DE%20-%20101%20Lab%201.1/Sample%20-%20Superstore.xls):
-
-- Концептуальную
-- Логическую
-- Физическую
+1. Нарисовать модель данных для  файла [Superstore](https://github.com/Data-Learn/data-engineering/blob/master/DE-101%20Modules/Module01/DE%20-%20101%20Lab%201.1/Sample%20-%20Superstore.xls):
+   
+- Концептуальную.
+- Логическую.
+- Физическую.
   Вы можете использовать бесплатную версию [SqlDBM](https://sqldbm.com/Home/) или любой другой софт для создания моделей данных баз данных.
 
-2. Когда вы нарисуете модель данных, вам нужно скопировать DDL и выполнить его в SQL клиенте.
-3. Вам необходимо сделать `INSERT INTO SQL`, чтобы заполнить **Dimensions** таблицы и **Sales Fact** таблицу. Сначала мы заполняем **Dimensions** таблицы, где в качестве **id** мы генерим последовательность чисел, а зачем **Sales Fact** таблицу, в которую вставляем **id** из **Dimensions** таблиц. Такой пример я рассматривал в видео.
+2. Скопировать  `DDL` и выполнить его в `SQL`-клиенте.
+3. Необходимо сделать `INSERT INTO SQL`, чтобы заполнить **Dimensions** таблицы и **Sales Fact** таблицу. Сначала  заполняем **Dimensions** таблицы, где в качестве **id** генерим последовательность чисел, а затем **Sales Fact** таблицу, в которую вставляем **id** из **Dimensions** таблиц.
 
 ## 2.5: База данных в облаке
 
@@ -121,12 +121,12 @@
 1. Лекции на Coursera [Google IT Support Professional](https://www.coursera.org/professional-certificates/google-it-support) (English)
 2. [Шпаргалка системного администратора по сетевым инструментам Linux](https://habr.com/ru/company/ruvds/blog/417485/) (Русский)
 
-### Практика 2.4
+### Лабораторная работа 2.4
 
-1. Вам необходимо [создать учетную запись в AWS](https://github.com/Data-Learn/data-engineering/blob/master/how-to/How%20to%20create%20AWS%20Account.md). Это бесплатно. Если вы запускаете сервис в AWS, не забудьте его удалить, когда он не нужен, а то могут и денюшку списать.
-2. Используя сервис AWS Lightsail или [AWS RDS (смотрите инструкцию)](https://github.com/Data-Learn/data-engineering/blob/master/how-to/how_to_amazon_rds.md) создайте БД Postgres и активируйте **Public access**
-3. Подключитесь к новой БД через SQL клиент (например DBeaver)
-4. Загрузите данные из модуля 2.3 (Superstore dataset) в staging (схема БД `stg`) и загрузите dimensional model (схема `dw`). Вы можете использовать мой пример SQL для этого упражнения:
+1. Опционально(при наличии доступа к облачному сервису). Необходимо [создать учетную запись в AWS](https://github.com/Data-Learn/data-engineering/blob/master/how-to/How%20to%20create%20AWS%20Account.md). Это бесплатно. Если вы запускаете сервис в AWS, не забудьте его удалить, когда он не нужен.
+2. Опционально(при наличии доступа к облачному сервису). Используя сервис AWS Lightsail или [AWS RDS (смотрите инструкцию)](https://github.com/Data-Learn/data-engineering/blob/master/how-to/how_to_amazon_rds.md) создайте БД Postgres и активируйте **Public access**
+3. Подключитесь к новой БД через SQL клиент (например DBeaver).
+4. Загрузите данные из пункта 2.3 (Superstore dataset) в staging (схема БД `stg`) и загрузите dimensional model (схема `dw`). Вы можете использовать  пример SQL для этого упражнения:
 
 - Staging [stg.orders.sql](https://github.com/Data-Learn/data-engineering/blob/master/DE-101%20Modules/Module02/DE%20-%20101%20Lab%202.1/stg.orders.sql)
 - Business Layer [from_stg_to_dw.sql](https://github.com/Data-Learn/data-engineering/blob/master/DE-101%20Modules/Module02/DE%20-%20101%20Lab%202.1/from_stg_to_dw.sql)
@@ -150,6 +150,3 @@
 5. [AARRR воронка — модель «Пиратские метрики» + фреймворк AAARRR](https://leadstartup.ru/db/aarrr) (Русский)
 6. [Обзор книги «Lean Analytics»](https://gopractice.ru/lean_analytics/) (Русский)
 
-### Домашнее задание
-
-В качестве домашнего задания вам необходимо создать дашборд в одном из решений, которые мы рассмотрели. ДЛя идей можно использовать задание из 1го модуля. Данные должны быть в Postgres, создать несколько отчетов. Для практики можно и во всех 3х создать.
