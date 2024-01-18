@@ -1,6 +1,6 @@
 # Модуль 6:  Аналитические Хранилища Данных
 
-[Обратно в содержание курса :leftwards_arrow_with_hook:](https://github.com/Data-Learn/data-engineering/blob/master/DE%20-%20101%20Guide.md) 
+[Обратно в содержание курса :leftwards_arrow_with_hook:](https://github.com/BosenkoTM/Data-Engineering-Platforms/tree/master?tab=readme-ov-file#%D0%BF%D0%BB%D0%B0%D1%82%D1%84%D0%BE%D1%80%D0%BC%D1%8B-data-engineering) 
 
 В 6 модуле мы узнаем про аналитические и облачные хранилища данных которые используются в индустрии. Крупные компания Amazon, Microsoft, Airbnb, и многие другие из списка SP500 используют одну или сразу несколько решений для аналитических хранилищ данных - Amazon Redshift, Microsoft Synapse, Google BigQuery или Snowflake. Но кроме облачных хранилищ есть еще много on-premise Teradata, Greenplum, Vertica, Exasol и тп. 
 
