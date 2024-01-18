@@ -128,10 +128,10 @@
 3. Подключитесь к новой БД через SQL клиент (например DBeaver).
 4. Загрузите данные из пункта 2.3 (Superstore dataset) в staging (схема БД `stg`) и загрузите dimensional model (схема `dw`). Вы можете использовать  пример SQL для этого упражнения:
 
-- Staging [stg.orders.sql](https://github.com/Data-Learn/data-engineering/blob/master/DE-101%20Modules/Module02/DE%20-%20101%20Lab%202.1/stg.orders.sql)
-- Business Layer [from_stg_to_dw.sql](https://github.com/Data-Learn/data-engineering/blob/master/DE-101%20Modules/Module02/DE%20-%20101%20Lab%202.1/from_stg_to_dw.sql)
+- Staging [stg.orders.sql](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/modules/Module02/Lab%202.1/stg.orders.sql)
+- Business Layer [from_stg_to_dw.sql](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/modules/Module02/Lab%202.1/from_stg_to_dw.sql)
 
-5. Попробуйте выполнить свои запросы из предыдущих упражнений. Не забудьте указать схему перед название таблицы. Например, `public.orders` или `stg.orders`.
+5. Выполнить свои запросы из предыдущих упражнений. Не забудьте указать схему перед название таблицы. Например, `public.orders` или `stg.orders`.
 
 ## 2.6: Как донести данные до бизнес-пользователя (Пример решений на KlipFolio, Google Sheets и пр.)
 
