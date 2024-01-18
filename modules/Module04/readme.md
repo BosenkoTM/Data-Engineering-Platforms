@@ -1,12 +1,10 @@
 # Модуль 4:  Интеграция и трансформация данных - ETL и ELT
 
-[Обратно в содержание курса :leftwards_arrow_with_hook:](https://github.com/Data-Learn/data-engineering/blob/master/DE%20-%20101%20Guide.md) 
+[Обратно в содержание курса :leftwards_arrow_with_hook:](https://github.com/BosenkoTM/Data-Engineering-Platforms/tree/master?tab=readme-ov-file#%D0%BF%D0%BB%D0%B0%D1%82%D1%84%D0%BE%D1%80%D0%BC%D1%8B-data-engineering) 
 
 В 4-ом модуле нашего курса вы узнаете про интеграцию и трансформацию данных - ETL и ELT. Это ключевой элемент в аналитическом решении, с помощью которого мы наполняем данными хранилище данных и автоматизируем загрузку и трансформацию данных. Мы рассмотрим примеры популярных on-premise batch решений. Узнаете в чем отличие ETL от ELT, для чего нужны такие решения, что значит batch и on-premise, как с помощью ETL/ELT можно создавать модели данных, на примере dimensional modeling, рассмотрим рынок ETL/ELT. Потренируемся на классическом open-source ETL решении Pentaho DI и рассмотрим настольный инструмент от Tableau - Tableau Prep. 
 
 ## Модуль 4.1 Введение
-
-**Видео лекция - теория** - [Введение](https://youtu.be/VPFf8Ck_AUU). 
 
 ## Модуль 4.2 Что такое ETL и ELT? 
 
@@ -41,11 +39,6 @@
 8. [Matillion: Orchestrating Data Flows and Transformations on AWS](https://youtu.be/ip004IMIacQ) (English)
 9. [What is Fivetran?](https://youtu.be/OEM0-_g6o94) (English)
 
-### Практика
-Вам необходимо скачать и запустить Pentaho Data Integration Community Edition. Это бесплатный ETL инструмент, который работает на Windows, Linux и Mac. Вы можете скачать его [отсюда](https://sourceforge.net/projects/pentaho/). Pentaho DI требует установку Java 8. Попробуйте скачать архив и распаковать его. Вам нужно запустить spoon.sh для Linux/Mac и spoon.bat для Windows. У меня на Mac есть, например, иконка, `Data integration`. Если появятся вопросы, то задавайте их в Slack канале `#de-module04-cohort1`
-
-Павел Новичков, куратор 4-го модуля и ETL специалист, записал видео по установке Pentaho DI на примере Windows 10, с которым вы можете ознакомиться [здесь](https://www.youtube.com/watch?v=RL-EZCi51gc&feature=youtu.be&ab_channel=DataLearn)
-
 ## Модуль 4.4 2 ETL Компоненты и начало работы с ETL на примере Pentaho Data Integration
 
 Мы уже должны понимать основные компоненты любого аналитического решения для больших и маленьких данных - это BI/DW/ETL. Понимать концептуально. В этом уроки мы поговорим про ETL решения и про требования и рекомендации, которые неплохо продумать перед началом создания data pipelines или data integration. Так же мы узнаем основные элементы open-source решения - Pentaho DI и потренируемся выполнять упражнения 2-го модуля с помощью UI ETL инструмента.
@@ -55,24 +48,6 @@
 **Видео лекция - практика** - [Начало работы с Pentaho DI](https://youtu.be/-oCBttnefMQ?t=2087)
 
 [Видео по основам Pentaho DI](https://youtu.be/K3X9wIC0jO8) от Павла Новичкова и [ссылка на исходные файлы из видео](https://drive.google.com/file/d/1yw0E7Gqm4Rocui_pQYPdfmmnFtGfx3LY/view?usp=sharing)
-
-### Практика
-В качестве практики вам необходимо:
-1. Скачать и запустить Pentaho DI, [отсюда](https://sourceforge.net/projects/pentaho/).
-2. [Скачать мои примеры Pentaho jobs](https://github.com/Data-Learn/data-engineering/tree/master/DE-101%20Modules/Module04/DE%20-%20101%20Lab%204.4) для `Staging` и `Dimension Tables` и доделать их, чтобы получить такой же результат, как в модуле 2.
-3. Создайте еще одну трансформацию, в которой вы создадите `sales_fact` таблицу
-
-------
-**Подсказка для пользователей MacOS:**
-Всё, что показано в видео выше выполняется аналогично и на Windows и на MacOS, кроме двух моментов:
-  * Установка PentahoDI. Можно посмотреть подробнее в [этой статье.](https://medium.com/@originaleye/how-to-install-pentaho-8-2-on-a-mac-4e4f8d526df2)
-  * Загрузка файла *Sample - Superstore.xls* через командную строку. Для этого используйте команду:
-
-        curl -s -o <директория_куда_сохранится_файл>/<указать_имя_файла> -L <ссылка_на_файл_в_интернете>
-
-    Например: 
-
-        curl -s -o /Users/dm/Documents/Pentaho-Demo/source/sample-superstore-shell.xls -L https://github.com/Data-Learn/data-engineering/raw/master/DE-101%20Modules/Module01/DE%20-%20101%20Lab%201.1/Sample%20-%20Superstore.xls
 
 
 ## Модуль 4.5 34 ETL Подсистемы
@@ -102,24 +77,41 @@
 7. [Версионность и история данных](https://habr.com/ru/post/101544/) (Русский)
 8. [Data Warehousing - 34 Kimball Subsytems](https://datacadamia.com/data/warehouse/subsystem) (English)
 
-### Практика
-1. В качестве практики вам необходимо выявить 8-10 подсистем в ETL Pentaho DI и написать небольшой отчет, в котором вы приложите print screen компонента (ETL подсистемы) и напишите про его свойства. Результат сохраните в вашем Git.
-2. Самостоятельно попробовать сделать упражнения из главы 9 книги `Pentaho Data Integration Beginner's Guide - Second Edition`. В книге вы найдете необходимую информацию по установки тестовой базы данных. Я сохранил все материалы для лабораторных работ в нашем [git](https://github.com/Data-Learn/data-engineering/tree/master/DE-101%20Modules/Module04/DE%20-%20101%20Lab%204.5).
-Это достойная задача для будущего ETL разработчика или Инженера Данных.
+### Лабораторная работа 4.1
+
+1. Скачать [отсюда](https://sourceforge.net/projects/pentaho/) и запустить Pentaho DI. Pentaho DI требует установку Java 8. Попробуйте скачать архив и распаковать его. Необходимо запустить spoon.sh для Linux/Mac и spoon.bat для Windows. Видео по установке Pentaho DI на примере Windows 10  [здесь](https://www.youtube.com/watch?v=RL-EZCi51gc&feature=youtu.be&ab_channel=DataLearn).
+2. [Скачать  примеры Pentaho jobs](https://github.com/BosenkoTM/Data-Engineering-Platforms/tree/master/modules/Module04/Lab%204.4#%D0%BF%D0%B5%D1%80%D0%B5%D0%B4-%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%BC-%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%BE%D0%BC) для `Staging` и `Dimension Tables`.
+3. Создайте еще одну трансформацию, в которой создать `sales_fact` таблицу.
+4. Выявить 8-10 подсистем в ETL Pentaho DI и написать небольшой отчет, в котором приложить print screen компонента (ETL подсистемы) и написать про его свойства. Результат сохраните в Git.
+5. Выполнить упражнения из главы 9 книги `Pentaho Data Integration Beginner's Guide - Second Edition`. В книге найдете необходимую информацию по установки тестовой базы данных [линк на исходные файлы](https://github.com/BosenkoTM/Data-Engineering-Platforms/tree/master/modules/Module04/Lab%204.5/PentahoDIBeginnersGuide).
+
+------
+**Подсказка для пользователей MacOS:**
+Всё, что показано в видео выше выполняется аналогично и на Windows и на MacOS, кроме двух моментов:
+  * Установка PentahoDI. Можно посмотреть подробнее в [этой статье.](https://medium.com/@originaleye/how-to-install-pentaho-8-2-on-a-mac-4e4f8d526df2)
+  * Загрузка файла *Sample - Superstore.xls* через командную строку. Для этого используйте команду:
+
+        curl -s -o <директория_куда_сохранится_файл>/<указать_имя_файла> -L <ссылка_на_файл_в_интернете>
+
+    Например: 
+
+        curl -s -o /Users/dm/Documents/Pentaho-Demo/source/sample-superstore-shell.xls -L https://github.com/Data-Learn/data-engineering/raw/master/DE-101%20Modules/Module01/DE%20-%20101%20Lab%201.1/Sample%20-%20Superstore.xls
+
 
 ## Модуль 4.6 Data Prep на примере Tableau Prep и Alteryx
 С ETL/ELT мы более-менее разобрались. К счастью или к сожалению, на сегодняшний день существует огромное количество программ для интеграции и трансформации данных. Некоторые программы относятся к классу Data Prep. Я их называю настольными ETL инструментами для бизнес пользователей. Если BI инструмент нам позволяет с помощью drag and drop создать красивый дашборд, то data prep позволит нам подготовить данные для BI. 
 
 **Видео лекция - теория** - [Data Prep на примере Tableau Prep и Alteryx](https://youtu.be/KfuY2J9h5B0). 
 
-**Видео лекция - практика** - [Установка и Обзор Tableau Prep и Alteryx](https://youtu.be/KfuY2J9h5B0?t=900)
+**Видео лекция - практика** - [Установка и Обзор Tableau Prep и Alteryx](https://youtu.be/KfuY2J9h5B0?t=900).
 
 ### Дополнительные материалы для изучения
 1. [Начало работы с Tableau prep](https://help.tableau.com/current/prep/en-us/prep_get_started.htm) (English)
 2. [Начало работы с Alteryx Designer](https://help.alteryx.com/learn/learningguide.html) (English)
 
-### Практика
-Вам необходимо построить `Tableau Prep Flow` или `Alteryx Workflow` и сохранить результат в своем `git`. Вы можете использовать данные `Sales Superstore` из модуля 1 и 2 или подключиться к БД Postgres (из 2-го и 3го модуля), в которую мы загружали данные. Альтернативно вы можете просто повторить существующие задания из Alteryx/Tableau tutorial, чтобы понять как работает инструмент.
+### Лабораторная работа 4.2
+1. Построить `Tableau Prep Flow` на основе [Data Prep на примере Tableau Prep и Alteryx](https://youtu.be/KfuY2J9h5B0) или `Alteryx Workflow` на основе [Установка и Обзор Tableau Prep и Alteryx](https://youtu.be/KfuY2J9h5B0?t=900) и сохранить результат в  `git`. Использовать данные `Sales Superstore` из модуля 1 и 2 или подключиться к БД Postgres (из 2-го и 3го модуля), в которую загружали данные. 
+2. Повторить существующие задания из Alteryx/Tableau tutorial, чтобы понять как работает инструмент.
 
 **Для пользователей MacOS** (для windows есть инфо в видео): Если у Вас истёк срок действия пробной лицензии на Tableau Desktop после работы над 3-м модулем, можно скачать Tableau Prep и активировать для него отдельную пробную версию.
 
@@ -167,30 +159,17 @@
 - [ЧАСТЬ 2 - ВВЕДЕНИЕ В ДОКЕР КОНТЕЙНЕР / DOCKER / ДМИТРИЙ БРАЖЕНКО](https://youtu.be/JQCTjz_PzSM)
 
 
-### Практика
-Вы можете выполнить один или несколько tutorial(s), чтобы попробовать `fancy etl` в деле. Это будет прекрасный пример вашего интереса к данному вопросу, который вы можете продемонстрировать на собеседовании и рассказать, как вы любите пробовать новые инструменты и изучать их особенности:
-1. [Apache Airflow tutorial](https://airflow.apache.org/docs/apache-airflow/stable/tutorial.html) и [Airflow tutorial 1: Introduction to Apache Airflow](https://youtu.be/AHMm1wfGuHE)
-2. [Apache Nifi tutorial](https://nifi.apache.org/docs/nifi-docs/html/getting-started.html)
-3. [dbt tool tutorial](https://docs.getdbt.com/docs/introduction/) и [dbt (data build tool) Tutorial from Fishtown Analytics](https://youtu.be/M8oi7nSaWps)
-4. [Luigi tutorial](https://luigi.readthedocs.io/en/stable/)
-5. [Clickhouse tutorial](https://clickhouse.tech/docs/ru/getting-started/tutorial/)
-
-А также вы сможете взять данные из модуля 2 по Superstore на Postres и использвать инструменты выше, чтобы получить результат. Это уже серьезная заявка на звание Data Engineer.
+### Лабораторная работа 4.3
+1.Выполнить один о tutorial для `fancy etl`:
+ - [Apache Airflow tutorial](https://airflow.apache.org/docs/apache-airflow/stable/tutorial.html) и [Airflow tutorial 1: Introduction to Apache Airflow](https://youtu.be/AHMm1wfGuHE)
+ - [Apache Nifi tutorial](https://nifi.apache.org/docs/nifi-docs/html/getting-started.html)
+ - [dbt tool tutorial](https://docs.getdbt.com/docs/introduction/) и [dbt (data build tool) Tutorial from Fishtown Analytics](https://youtu.be/M8oi7nSaWps)
+ - [Luigi tutorial](https://luigi.readthedocs.io/en/stable/)
+ - [Clickhouse tutorial](https://clickhouse.tech/docs/ru/getting-started/tutorial/)
+2. Взять данные из лабораторной работы 2 по Superstore на Postres и использвать инструменты выше изпункта 1 для анализа данных.
 
 ## Модуль 4.8 Требования к ETL разработчику и отличия от Data Engineer
 
 Практически в описание к любой data вакансии мы можем встретить термин ETL. ETL роль очень важная, так как эти процессы отвечают за консолидацию данных в едином хранилище данных, а в некоторых случаях это может быть озеро данных. Концептуально вакансия ETL разработчик/инженер Data Engineer очень похоже, разница лишь в скилах и названии позиции. 
 
 **Видео лекция - теория** - [Требования к ETL разработчику и отличия от Data Engineer](https://youtu.be/YF15Nh7DdOs). 
-
-## Заключительный Проект по ETL
-Павел Новичков подготовил для вас интересный проект на Pentaho DI.
-
-Пожалуйста пройдите [опрос по завершении Модуля 4](https://forms.gle/F5EgyonrpUcunm6ZA). Так я смогу посмотреть, сколько человек закончило модуль, что было хорошо, а что можно улучшить.
-
-По окончанию модуля 4, вы можете расшарить значок `04 | ETL` в социальных сетях и рассказать о своих достижениях. 
-
-![img](https://github.com/Data-Learn/data-engineering/blob/master/img/de101-module04.png)
-
-**PS Если материал оказался полезным, вы можете поддержать авторов через**
-[ЮMoney](https://yoomoney.ru/to/4100116864248269) или [Patreon](https://www.patreon.com/dmitryanoshin) или [Paypal](https://paypal.me/dmitryanoshin)
