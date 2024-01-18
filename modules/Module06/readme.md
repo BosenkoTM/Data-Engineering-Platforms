@@ -1,16 +1,15 @@
 # Модуль 6:  Аналитические Хранилища Данных
 
-[Обратно в содержание курса :leftwards_arrow_with_hook:](https://github.com/Data-Learn/data-engineering/blob/master/DE%20-%20101%20Guide.md) 
+[Обратно в содержание курса :leftwards_arrow_with_hook:](https://github.com/BosenkoTM/Data-Engineering-Platforms?tab=readme-ov-file#%D0%BF%D0%BB%D0%B0%D1%82%D1%84%D0%BE%D1%80%D0%BC%D1%8B-data-engineering) 
 
-В 6 модуле мы узнаем про аналитические и облачные хранилища данных которые используются в индустрии. Крупные компания Amazon, Microsoft, Airbnb, и многие другие из списка SP500 используют одну или сразу несколько решений для аналитических хранилищ данных - Amazon Redshift, Microsoft Synapse, Google BigQuery или Snowflake. Но кроме облачных хранилищ есть еще много on-premise Teradata, Greenplum, Vertica, Exasol и тп. 
+В 6 модуле узнаем про аналитические и облачные хранилища данных которые используются в индустрии - Amazon Redshift, Microsoft Synapse, Google BigQuery или Snowflake. Но кроме облачных хранилищ есть еще много on-premise Teradata, Greenplum, Vertica, Exasol и тп. 
 
-Из модуля вы узнаете:
-- Основы аналитических хранилищ данных
-- MPP vs SMP
-- Практика с Redshift, Snowflake и Azure Synapse
-- Облачные ETL инструменты
-- Обзор вакансий мирового рынка
-- Обзор решений для операционной аналитики - Splunk, Azure Data Explorer и ElasticSearch
+Темы:
+- Основы аналитических хранилищ данных.
+- MPP vs SMP.
+- Облачные ETL инструменты.
+- Обзор вакансий мирового рынка.
+- Обзор решений для операционной аналитики - Splunk, Azure Data Explorer и ElasticSearch.
 
 ## Модуль 6.1 Введение
 
@@ -21,7 +20,7 @@
 
 На этом уроке мы посмотрим фундаментальные вещи про хранилище данных, а на последующих уроках, мы будем уже пробовать различные решения хранилищ данных и ETL/ELT инструментов.  Практически каждый слайд можно трансформировать в вопрос для собеседования, и я сам, нираз, спрашивал на собеседованиях в Амазон эти вопросы на позицию инженера данных и bi разработчика.
 
-Из модуля вы узнаете:
+Темы:
 - История хранилищ данных
 - База данных vs Хранилище данных
 - Хранилище данных (DW) vs Платформа данных
@@ -43,15 +42,12 @@
 
 **Видео лекция - теория** - [Что Такое Аналитическое Хранилище Данных?](https://youtu.be/JuQCUGUWqgU). 
 
-
 ### Вебинар от эксперта
-- [GREENPLUM ЧТО ЗА ЗВЕРЬ И КАК ЕГО ПРИРУЧИТЬ / ДМИТРИЙ ПАВЛОВ](https://youtu.be/cVDIbEsCTow)
+- [GREENPLUM ЧТО ЗА ЗВЕРЬ И КАК ЕГО ПРИРУЧИТЬ](https://youtu.be/cVDIbEsCTow)
 
 ### Дополнительные материалы для изучения
 - [Отчет по Gigaom DW Benchmarking](https://gigaom.com/report/data-warehouse-cloud-benchmark/)
 - [Отчет Fivetran по DW Benchmarking](https://fivetran.com/blog/warehouse-benchmark)
-- [Интересный и большой курс по Data Warehouse на Coursera - Data Warehousing for Business Intelligence Specialization](https://www.coursera.org/specializations/data-warehousing)
-- [Как получить на Coursera доступ к полному курсу и сертификату бесплатно](https://medium.com/@snipsnapsnoop/%D0%BA%D0%B0%D0%BA-%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C-%D0%BD%D0%B0-coursera-%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF-%D0%BA-%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%BC%D1%83-%D0%BA%D1%83%D1%80%D1%81%D1%83-%D0%B8-%D1%81%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D1%83-%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE-af9afb7b55e)
 
 Интересные статьи по теме (необязательно все читать, но можно ознакомиться, теперь вы точно будете знать ключевые слова по теме)
 - [Что такое Teradata?](https://habr.com/ru/post/209078/)
@@ -67,15 +63,12 @@
 - [HP Vertica, проектирование хранилища данных, больших данных](https://habr.com/ru/post/227111/)
 - [Просто и доступно о аналитических БД](https://habr.com/ru/post/149641/)
 
-### Лабораторная работа
-На лабораторной работе вы будете использовать виртуальную мащину Teradata DW, вам нужно будет скачать ее и настроить доступ через конфигурацию сети. Дальше вы сможете загрузить данные через CLI инструмент и подключить Power BI. Таким образом у вас будет полноценное аналитическое решение (портативное), которое работает во многих компаниях.
+### Лабораторная работа 6.1
+1. Установить виртуальную мащину [Teradata DW](https://github.com/Data-Learn/data-engineering/blob/master/DE-101%20Modules/Module06/DE%20-%20101%20Labs/Teradata/Teradata%20Lab.md), скачать ее и настроить доступ через конфигурацию сети.
+2. Загрузить данные через CLI инструмент и подключить Power BI. Получить полноценное аналитическое решение (портативное), которое работает во многих компаниях.
+3. Использовать Pentaho DI, чтобы добавить ETL компомент в ваше аналитическое решение. Реализовать одно из заданий цикла лабораторных работ из темы 4.
 
 **Видео лекция - практика** - [Что Такое Аналитическое Хранилище Данных? - практика](https://youtu.be/JuQCUGUWqgU?t=2766). 
-
-[Ссылка на лабораторную работу к модулю 6.2](https://github.com/Data-Learn/data-engineering/blob/master/DE-101%20Modules/Module06/DE%20-%20101%20Labs/Teradata/Teradata%20Lab.md)
-
-### Опциональное задание:
-Вы можете использовать Pentaho DI, чтобы добавить ETL компомент в ваше аналитическое решение. Попробуйте реализовать задание из модуля 4 (любое или все).
 
 
 ## Модуль 6.3 Основы Amazon Redshift
@@ -99,8 +92,6 @@
 
 **Видео лекция - теория** - [Основы Amazon Redshift](https://youtu.be/K0TOh-Pl3q0). 
 
-В этом уроке я не показывал и не рассказывал про Amazon Redshift. По-сути это query engine (как Athena), который помогает нам писать SQL запросы к данные в S3 Data lake. То есть данные, которые находятся за пределами Amazon Redshift. Таким образом Amazon Redshift как бы lake house, но не такой удобный как Snowflake. Расскажу про него на модуле 8 или 9.
-
 ### Вебинар от эксперта
 - [Путь Инженера Аналитики: Решение для Маркетинга / Артемий Козырь](https://youtu.be/SoOcvYPSm7o)
 
@@ -117,23 +108,6 @@
 - [Гид по параллельному масштабированию Amazon Redshift и результаты тестирования](https://habr.com/ru/company/skyeng/blog/451538/)
 - [Аналитический движок Amazon Redshift + преимущества Облака](https://habr.com/ru/company/wheely/blog/539154/)
 - [Мое выступление в КРОК - Pizza as a service: как Amazon на Redshift мигрировал](https://habr.com/ru/company/croc/blog/481836/)
-
-### Лабораторная Работа
-На лабораторной работе вам нужно будет:
-- Создать свой кластер Amazon Redshift
-- Настроить сетевой доступ к нему и подключиться SQL Client - DBeaver
-- Сгенерировать данные утилитой TPC, той самой, которую используют для benchmarking все вендоры баз данных
-- Загрузить данные с использование COPY и манифеста
-- Оптимизировать таблицы и запросы с использование функционала Redshift - Distribution, Sort, Compression и Encoding
-
-1. __Лабораторна работа 1__ - генерация данных утилитой TPC в облаке AWS на виртуальной машине EC2 - [Создание выборки данных](https://github.com/Data-Learn/data-engineering/blob/master/DE-101%20Modules/Module06/DE%20-%20101%20Labs/AWS%20-%20Redshift/Generating_Datasets.md)
-2. **Лабораторная работа 2** - [создание и настройка кластера, загрузка данных и оптимизаци](https://github.com/Data-Learn/data-engineering/blob/master/DE-101%20Modules/Module06/DE%20-%20101%20Labs/AWS%20-%20Redshift/Redshift_lab.md).
-
->Автор лабораторных работ Сергей Сволодарский, контакт в телеграмм @erfolg5862.
-
-**Бонус задание:**
-Так же, вы легко можете запустить другую виртуальную машину и установить на нее Tableau Server и/или ETL решение. Или вы можете подключить свои решения с локальной машины. Вы можете загрузить данные superstore и построить модель данных, как было в модуле 4. Возможности безграничны, все в ваших руках, и главное ничего нового!
- 
 
 ## Модуль 6.4 Основы Azure Synapse для Хранилища данных
 У Microsoft тоже есть облако Azure, и в нем есть целая платформа для аналитики, которая называется Azure Synapse Analytics. В него входят уже устоявшиеся инструменты Azure SQL Data Warehouse (теперь называется Dedicated SQL Pool), Azure Data Factory, Azure ML, Power BI Service, так и были добавлены новые Azure Spark Pools, Serverless SQL Pool. Все достаточно удобно, каждый инструмент легко интегрируется с решениями Azure. Если вы работаете с решениями Microsoft, то облако Azure это следующий логический шаг вашего развития. Так же Azure Synapse способен заменить решения Azure HDInsights и Azure Databricks (решения для big data). По опыту я знаю и видел огромное количество решений на Microsoft SQL Server (on-premise), но вообще не знаю ниодного решения на Azure Synapse, но уверен скоро их появится много.
@@ -154,13 +128,6 @@
 
 **Видео лекция - теория** - [Знакомство с Azure Synapse](https://youtu.be/gQAGa3xZr_M)
 
-На лабораторных работах я вам покажу:
-- Как создать Azure Synapse Workspace
-- Как в нем создать Serverless SQL Pools, Dedicated SQL Pool (Azure DW)
-- Посмотрим, что внутри Synapse Workspace
-- Покажу вам, как можно поиграться с данными NY taxi
-- Покажу, где взять открытые данные по COVID-19
-
 **Видео лекция - практика** - [Демонстрация Azure Synapse Workspace и лабораторных работ с DW in a Day воркшопа](https://youtu.be/gQAGa3xZr_M?t=3082)
 
 ### Дополнительные материалы для изучения
@@ -172,27 +139,6 @@
 - [Azure Synapse for Data Analytics — Create Workspaces with CLI](https://medium.com/microsoftazure/azure-synapse-for-data-analytics-create-workspaces-with-cli-bd5ef90fd489)
 - [Introduction to Azure Synapse Analytics](https://medium.com/codex/introduction-to-azure-synapse-analytics-ff317e782f7b)
 - [Azure Analytics: ясность в мгновение ока](https://habr.com/ru/company/microsoft/blog/503582/)
-
-**Курсы от Курсеры и Microsoft, скорей всего вам дадут кредиты на облако Azure**
-- [Introduction to Microsoft Azure Synapse Analytics](https://www.coursera.org/learn/introduction-to-microsoft-azure-synapse-analytics)
-- [Data Warehousing with Microsoft Azure Synapse Analytics](https://www.coursera.org/learn/data-warehousing-with-microsoft-azure-synapse-analytics)
-- [Azure Synapse SQL Pool - Implement Polybase](https://www.coursera.org/projects/azure-sql-pool-polybase)
-- [Data Engineering with MS Azure Synapse Apache Spark Pools](https://www.coursera.org/learn/data-engineering-with-ms-azure-synapse-apache-spark-pools)
-- [Modern Data Warehouse Analytics in Microsoft Azure](https://www.coursera.org/learn/data-warehouse-analytics-microsoft-azure)
-- [Operational Analytics with Microsoft Azure Synapse Analytics](https://www.coursera.org/learn/operational-analytics-with-microsoft-azure-synapse-analytics)
-- [Process Data with Microsoft Azure Synapse Link for Cosmo DB](https://www.coursera.org/projects/process-data-with-microsoft-azure-synapse-link-for-cosmo-db)
-
-
-### Лабораторная Работа
-В качестве домашнего задания вам нужно будет сделать одно-два из 4х заданий на выбор:
-1. Сделать лабораторную работу по Synapse. Сергей Сволодарский приготовил для вас детальную инструкцию - [Azure Synapse Analyics Workshop](https://github.com/Data-Learn/data-engineering/blob/master/DE-101%20Modules/Module06/DE%20-%20101%20Labs/Azure%20-%20Synapse%20Analytics/Azure-Synapse.MD).
-2. Попробовать сделать лаборатные работы Rock Your Data, на которые вы на примере разберете особенности дизайна таблиц.
-	- [Лабораторные работы и файлы SQL из RYD labs](https://github.com/Rock-Your-Data/ryd-workshops/tree/master/Azure%20Cloud%20DW%20in%20a%20Day/Labs)
-	- [Лабораторная работа по Azure SQL DW в формате PDF] (https://github.com/Rock-Your-Data/ryd-workshops/blob/master/Azure%20Cloud%20DW%20in%20a%20Day/Labs/Cloud%20DW%20in%20a%20Day%20_%20Labs.pdf)
-4. Взять данные Superstore из модуля 1 и загрузить их в Azure Dedicated SQL pool (Azure DW) с использованием Azure Data Factory или Pentaho DI. Дальше по примеру модуля 4 вы можете создать таблицу фактов и таблицы измерения (схема звезда) и подключить BI инструмент - Power BI, Tableau или любой другой. Такое вот end-to-end решение.
-	- [Данне Superstore из модуля 1]( https://github.com/Data-Learn/data-engineering/tree/master/DE-101%20Modules/Module01/DE%20-%20101%20Lab%201.1)
-	- [Модуль 4 про Fact и Dimensions таблицы](https://github.com/Data-Learn/data-engineering/blob/master/DE-101%20Modules/Module04/DE%20-%20101%20Module04.md#%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8C-44-2-etl-%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D1%8B-%D0%B8-%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B-%D1%81-etl-%D0%BD%D0%B0-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D0%B5-pentaho-data-integration)
-5. Сделать [Azure Synapse Tutorials](https://docs.microsoft.com/en-us/azure/synapse-analytics/get-started)
 
 ## Модуль 6.5 Основы Snowflake
 Анилитическое хранилище данных Snowflake появилось в 2015 году и порвало всех конкурентов - on-premise (Oracle, Teradata, Netezza и др) и облачных (Redshift, Azure SQL DW, BigQuery). 
@@ -236,7 +182,7 @@ Snowflake одноверменно SMP и MPP, если вы смотрели д
 - [Руководство по аналитике для основателя стартапа](https://habr.com/en/post/346326/)
 - [Вебинар ДатаЛерн SNOWFLAKE ИЛИ КАК БД ВЫБИРАЛИ / НИКОЛАЙ ГОЛОВ / MANYCHAT](https://youtu.be/XJa3gGWidg0)
 
-### Лабораторная Работа
+### Практикум
 
 В качестве лабораторной работы вы можете:
 - Выполнить оффициальные [tutorial Snowflake](https://www.snowflake.com/snowflake-essentials-training/), но уже переведнный Сергеем для вас - [Snowflake Workshop](https://github.com/Data-Learn/data-engineering/blob/master/DE-101%20Modules/Module06/DE%20-%20101%20Labs/Snowflake/snowflake-lab.md)
@@ -277,20 +223,20 @@ ETL(ELT) инструменты нам нужны, чтобы наполнять
 - [ВВЕДЕНИЕ В ДОКЕР КОНТЕЙНЕР / DOCKER / ДМИТРИЙ БРАЖЕНКО](https://youtu.be/JQCTjz_PzSM)
 
 
-### Лабораторная Работа
+### Лабораторная работа 6.2
 Для лабораторной работы вам нужно:
-	- Любое современное хранилище данных: Snowflake, Redshift, Synapse, BigQuery, Firebolt
-	- ETL/ELT инструмент
-	- BI
+	- Любое современное хранилище данных: Snowflake, Redshift, Synapse, BigQuery, Firebolt.
+	- ETL/ELT инструмент.
+	- BI.
 
-1. Вам нужно загрузить данных из S3/Azure Storage/Google Storage в DW - Staging (вы можете использовать данные Superstore из модуля 4)
-2. Преобразовать данные из Staging в Fact таблицу(ы) и таблицы измерений
-3. Подключить BI инструмент (JDBC/ODBC драйвер)
-4. Нарисовать архитектуру решения в Draw.io
+1. Вам нужно загрузить данных из S3/Azure Storage/Google Storage в DW - Staging (вы можете использовать данные Superstore из модуля 4).
+2. Преобразовать данные из Staging в Fact таблицу(ы) и таблицы измерений.
+3. Подключить BI инструмент (JDBC/ODBC драйвер).
+4. Нарисовать архитектуру решения в Draw.io.
 
 ## Модуль 6.7 Анти SQL решения для операционной аналитики
 
-В этом уроке мы узнаем про термин Операционная Аналитика, и чем он отличается от традиционной аналитики. Заодно мы посмотрим на три самых популярных решения на рынке – Splunk, Azure Data Explorer и Kusto. Если кратко, то такие системы и решения не являются главными для Инженера Данных или BI инженера. Для BI инженера операционная аналитика – это про еще один источник данных, с которым придется работать. А для инженера данных, решения операционной аналитики могут был полезны по многим причинам, мы можем собирать машинные данные (логи) о работе наших data pipelines, ETL, Big Data и тп, мы можем забирать данные из решений операционной аналитики и загружать в хранилище данных или озеро. А иногда, нас просят создать NoSQL решение данных на основе Elastic Stack. (меня не просили никогда, но вдруг!)
+В этом уроке мы узнаем про термин Операционная Аналитика, и чем он отличается от традиционной аналитики. Заодно мы посмотрим на три самых популярных решения на рынке – Splunk, Azure Data Explorer и Kusto. Если кратко, то такие системы и решения не являются главными для Инженера Данных или BI инженера. Для BI инженера операционная аналитика – это про еще один источник данных, с которым придется работать. А для инженера данных, решения операционной аналитики могут был полезны по многим причинам, мы можем собирать машинные данные (логи) о работе наших data pipelines, ETL, Big Data и тп, мы можем забирать данные из решений операционной аналитики и загружать в хранилище данных или озеро. А иногда, нас просят создать NoSQL решение данных на основе Elastic Stack. 
 
 В этом видео вы узнаете:
 
@@ -321,29 +267,7 @@ ETL(ELT) инструменты нам нужны, чтобы наполнять
 - [2. Elastic stack: анализ security логов. Logstash]( https://habr.com/ru/company/tssolution/blog/481960/)
 - [3. Elastic stack: анализ security логов. Дашборды]( https://habr.com/ru/company/tssolution/blog/482054/)
 
-### Лабораторная Работа
+### Лабораторная работа 6.3
 
-На лабораторной работе вам нужно установить одно из 3х решений, загрузить данные и визуализировать результат. Можно использовать tutorial.
-
-
-## Модуль 6.8 Обзор профессий и требований
-
-В заключительном уроке нашего модуля про аналитические хранилища данных мы посмотрим на пример описаний вакансий инженера данных на hh.ru, linkedin, indeed.com/worldwide. Так же покажу, как я сканирую вакансии и понимаю сходу насколько хорошая или плохая вакансия по описанию. Все верно - "встречают по одежке!"
-
-**Видео лекция - теория** - [Обзор профессий и требований](https://youtu.be/xXpoegKJUYU)
-
-
-
-По окончанию модуля 6, вы можете расшарить значок `06 | Cloud DW` в социальных сетях и рассказать о своих достижениях. 
-
-![img](https://github.com/Data-Learn/data-engineering/blob/master/img/de101-module06.png)
-
-А также добавить в Linkedin сертификат:
-
-![img](https://github.com/Data-Learn/data-engineering/blob/master/img/linkedin06cloud.PNG.jpg)
-Другие доступные сертификаты можете посмотреть в этом [linkedin профайле](https://www.linkedin.com/in/lana-naumova-8a1b78171/).
-
-
-PS Если материал оказался полезным, вы можете поддержать авторов через 
-[ЮMoney](https://yoomoney.ru/to/4100116864248269) или [Patreon](https://www.patreon.com/dmitryanoshin) или [Paypal](https://paypal.me/dmitryanoshin)
+1. Установить [Elastic Search]( https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html), загрузить данные и визуализировать результат.
 
