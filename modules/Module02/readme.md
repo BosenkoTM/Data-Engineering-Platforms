@@ -72,16 +72,15 @@
 1. [Интерактивный онлайн-курс по SQL СУБД PostgreSQL](https://learndb.ru/) (Русский)
 2. [Интерактивный SQL учебник с упражнениями](https://sql-ex.ru/) (Русский)
 3. [Основные функции SQL](https://khashtamov.com/ru/window-functions-sql/) (Русский)
-4. [Практика SQL](https://towardsdatascience.com/sqlzoo-the-best-way-to-practice-sql-66b7ccb1f17a) (English)
-5. [SQL: Analyzing Business Metrics](https://www.codecademy.com/learn/sql-analyzing-business-metrics) (English)
-6. [Analyze data with SQL](https://www.codecademy.com/learn/paths/analyze-data-with-sql) (English)
-7. [Большой курс SQL и Баз Данных от Stanford](https://www.edx.org/course/databases-5-sql) (English)
-8. [Интерактивный тренажер по SQL](https://stepik.org/course/63054/) (Русский)
-9. [Лучшие вопросы средней сложности по SQL на собеседовании аналитика данных](https://habr.com/ru/company/dcmiran/blog/500360/) (Русский)
+4. [SQL: Analyzing Business Metrics](https://www.codecademy.com/learn/sql-analyzing-business-metrics) (English)
+5. [Analyze data with SQL](https://www.codecademy.com/learn/paths/analyze-data-with-sql) (English)
+6. [Большой курс SQL и Баз Данных от Stanford](https://www.edx.org/course/databases-5-sql) (English)
+7. [Интерактивный тренажер по SQL](https://stepik.org/course/63054/) (Русский)
+8. [Лучшие вопросы средней сложности по SQL на собеседовании аналитика данных](https://habr.com/ru/company/dcmiran/blog/500360/) (Русский)
 
 ### Лабораторная работа 2.2
 
-1. Установить клиент SQL для подключения базы данных. [Инструкции по установки DBeaver](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/how-to/How%20to%20install%20DBeaver.md). Так же вы можете использовать любой другой клиент для подключения к ваше БД.
+1. Установить клиент SQL для подключения базы данных. [Инструкции по установки DBeaver](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/how-to/How%20to%20install%20DBeaver.md). Так же вы можете использовать любой другой клиент для подключения к вашей БД.
 2. Создать 3 таблицы и загрузите данные из [Superstore Excel файл](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/modules/Module01/Lab%201.1/Sample%20-%20Superstore.xls) в базу данных. Сохраните в  GitHub скрипт загрузки данных и создания таблиц. Вы можете использовать готовый [пример sql файлов](https://github.com/BosenkoTM/Data-Engineering-Platforms/tree/master/modules/Module02).
 3. Напишите запросы, чтобы ответить на вопросы из [Модуля 01](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/modules/Module01/Lab%201.1/readme.md#%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0-%D0%B2-excel). Сохраните в вашем GitHub скрипт загрузки данных и создания таблиц.
 
@@ -120,16 +119,6 @@
 
 1. Лекции на Coursera [Google IT Support Professional](https://www.coursera.org/professional-certificates/google-it-support) (English)
 2. [Шпаргалка системного администратора по сетевым инструментам Linux](https://habr.com/ru/company/ruvds/blog/417485/) (Русский)
-
-### Лабораторная работа 2.4
-
-1. Опционально(при наличии доступа к облачному сервису). Необходимо [создать учетную запись в AWS](https://github.com/Data-Learn/data-engineering/blob/master/how-to/How%20to%20create%20AWS%20Account.md). Это бесплатно. Если вы запускаете сервис в AWS, не забудьте его удалить, когда он не нужен.
-2. Опционально(при наличии доступа к облачному сервису). Используя сервис AWS Lightsail или [AWS RDS (смотрите инструкцию)](https://github.com/Data-Learn/data-engineering/blob/master/how-to/how_to_amazon_rds.md) создайте БД Postgres и активируйте **Public access**
-3. Подключитесь к новой БД через SQL клиент (например DBeaver).
-4. Загрузите данные из пункта 2.3 (Superstore dataset) в staging (схема БД `stg`) и загрузите dimensional model (схема `dw`). Вы можете использовать  пример SQL для этого упражнения:
-
-- Staging [stg.orders.sql](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/modules/Module02/Lab%202.1/stg.orders.sql)
-- Business Layer [from_stg_to_dw.sql](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/modules/Module02/Lab%202.1/from_stg_to_dw.sql)
 
 5. Выполнить свои запросы из предыдущих упражнений. Не забудьте указать схему перед название таблицы. Например, `public.orders` или `stg.orders`.
 
