@@ -1,7 +1,7 @@
 # Задание для Power BI
 В этой папке находятся:
 
-- Power BI дашборд, который Эдгар показывал в лекции `DataLearn.pbix`
+- Power BI дашборд
 - Excel файл с данными `DataLearnDatasetHW.xlsx`
 
 Вот так выглядит дашборд:
