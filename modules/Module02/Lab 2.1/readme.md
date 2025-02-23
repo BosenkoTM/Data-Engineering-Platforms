@@ -7,14 +7,123 @@ DEP-MGPU/Module2/
 И сохраняйте там результат.
 ```
 
-## Установка БД
+Требования к электронному отчету по лабораторной работе
 
-## Загрузка данных в БД
+## 1. Прикрепить скрипты выполнения варианта задания
 
-## SQL запросы
+```sql
+-- Задание 1: [Описание задания]
+CREATE VIEW dw.sales_by_region AS
+SELECT ...;
 
-## Нарисовать модель данных в SQLdbm
+-- Задание 2: [Описание задания]
+CREATE TABLE dw.product_metrics AS
+SELECT ...;
 
-## Нарисовать графики в Google Sheets
+-- Задание 3: [Описание задания]
+SELECT ...;
+```
 
-## Нарисовать графики в KlipFolio
+## 2.  Комментарии к запросам
+- Описание логики работы каждого запроса.
+- Обоснование выбора типов данных.
+- Пояснения по использованию индексов.
+- Особенности реализации.
+## 3. Моделирование данных (обратный реинжиниринг)
+### STG слой
+
+```sql
+-- Описание структуры таблиц staging-слоя
+DESCRIBE stg.orders;
+DESCRIBE stg.returns;
+DESCRIBE stg.people;
+```
+
+-- Связи между таблицами
+-- Особенности первичных данных
+
+
+### DW слой
+
+```sql
+-- Описание структуры таблиц витрин данных
+DESCRIBE dw.sales_fact;
+DESCRIBE dw.customer_dim;
+DESCRIBE dw.product_dim;
+DESCRIBE dw.location_dim;
+```
+-- Связи между таблицами
+-- Описание трансформаций данных
+
+### Словари (Dimensions)
+
+```sql
+-- Описание структуры справочников
+DESCRIBE dw.shipping_dim;
+DESCRIBE dw.calendar_dim;
+```
+
+-- Правила наполнения справочников
+-- Обработка медленно меняющихся измерений
+
+## 4. Проверка данных
+### Количество записей
+
+```sql
+-- Проверка количества записей в источнике и приемнике
+SELECT COUNT(*) FROM stg.orders;
+SELECT COUNT(*) FROM dw.sales_fact;
+
+-- Проверка распределения данных
+SELECT category, COUNT(*) 
+FROM dw.product_dim 
+GROUP BY category;
+```
+
+### Целостность данных
+
+```sql
+-- Проверка отсутствия дубликатов
+SELECT customer_id, COUNT(*)
+FROM dw.customer_dim
+GROUP BY customer_id
+HAVING COUNT(*) > 1;
+
+-- Проверка ссылочной целостности
+SELECT COUNT(*) 
+FROM dw.sales_fact f
+LEFT JOIN dw.customer_dim c ON f.customer_id = c.customer_id
+WHERE c.customer_id IS NULL;
+```
+
+## 5. Корректность расчетов
+
+```sql
+-- Проверка корректности агрегатов
+SELECT 
+    SUM(sales) as total_sales,
+    SUM(profit) as total_profit
+FROM stg.orders;
+
+SELECT 
+    SUM(sales) as total_sales,
+    SUM(profit) as total_profit
+FROM dw.sales_fact;
+
+-- Проверка основных метрик
+-- Сверка контрольных сумм
+```
+
+## Требования к оформлению.
+1. Структура файлов:
+   - create_tables.sql - создание всех таблиц.
+   - variant_XX_tasks.sql` - решение задач варианта.
+   - data_quality.sql - проверки качества данных.
+2. Документация:
+   - Описание структуры БД.
+   - Пояснения к реализации заданий.
+   - Результаты проверок.
+3. Формат:
+   - SQL-файлы с комментариями.
+   - Результаты в формате Excel/CSV.
+   - Диаграммы в формате PNG/PDF.
