@@ -97,7 +97,7 @@
 
 ### Лабораторная работа 2.3
 
-1. Нарисовать модель данных для  файла [Superstore](https://github.com/Data-Learn/data-engineering/blob/master/DE-101%20Modules/Module01/DE%20-%20101%20Lab%201.1/Sample%20-%20Superstore.xls):
+1. Нарисовать модель данных для  файла [Superstore](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/modules/Module01/Lab%201.1/Sample%20-%20Superstore.xls):
    
 - Концептуальную.
 - Логическую.
