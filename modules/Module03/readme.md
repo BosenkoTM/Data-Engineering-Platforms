@@ -393,6 +393,3 @@ undefined # Лабораторная работа: Создание аналит
 7. [ThoughtSpot](https://www.thoughtspot.com/)
 </details>
 
-### Индивидуальное задание 1
-1. Скачать Power BI дашборд и файл Excel с данными.
-2. Задание [здесь](https://github.com/BosenkoTM/Data-Engineering-Platforms/tree/master/modules/Module03/Lab%203.1/3_11_PowerBI).
