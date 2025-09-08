@@ -19,7 +19,7 @@
 
 3. Клиенты (customers). 
 
-![Analytics Value Chain](https://rockyourdata.cloud/wp-content/uploads/2019/02/Screen-Shot-2019-02-11-at-8.58.28-PM.png)
+![Analytics Value Chain](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/modules/Module01/photo/Analytics%20Value%20Chain.jpg)
 
 В современной бизнес-парадигме клиенты являются центральной группой заинтересованных лиц, поскольку многие успешные компании работают по принципу "customer centricity" (клиентоцентричности) или "customer obsession" (одержимости клиентом).
 
