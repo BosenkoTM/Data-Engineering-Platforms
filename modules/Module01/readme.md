@@ -452,13 +452,8 @@ Data Engineering for Data Analytics: A Classification of the Issues, and Case St
 Курсы по Data Engineering [Электронный ресурс] // DataEngineers.pro : обучающая платформа. – 2024. – Режим доступа: https://www.dataengineers.pro/courses
 
 
-Stepik [Электронный ресурс] : образовательная онлайн-платформа. – Режим доступа: https://stepik.org/
 
 
-Сурдин, В. Г. Лекция «Данные и наука» [Электронный ресурс] // Rutube : видеохостинг. – 2022. – Режим доступа: https://rutube.ru/video/4a1f1df69b4f2e6a9c8a/
-
-
-Data Engineering. Введение [Электронный ресурс] // VK Видео : видеоплатформа. – 2023. – Режим доступа: https://vk.com/video-221315315_456239021
 
 
 
