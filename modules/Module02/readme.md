@@ -1,4 +1,4 @@
-# Модуль 2: Базы данных и SQL
+# Модуль 2. Базы данных и SQL
 
 [Обратно в содержание курса :leftwards_arrow_with_hook:](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/readme.md)
 
