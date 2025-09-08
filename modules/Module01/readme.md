@@ -136,7 +136,7 @@
 
 
 
-**3 слоя архитектуры:**
+## 1.7. Архитектура современного аналитического решения
 
 ![Overall-Architecture](https://user-images.githubusercontent.com/65634544/83002262-2feb5080-a050-11ea-93f1-3fe6196c973a.png)
 
