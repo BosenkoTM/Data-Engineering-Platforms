@@ -28,7 +28,7 @@ DEP-MGPU/Module2/
 Здесь можно найти [инструкции по установке draw.io](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/how-to/How%20to%20install%20drawio.md).
 
 ## Аналитика в Excel
-Используя данные Sample - Superstore.xls сделать:
+Используя данные Sample - [Superstore.xls](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/modules/Module01/Lab%201.1/Sample%20-%20Superstore.xls) сделать:
 - Использовать Lookup.
 - Построить Сводную таблицу.
 - Построить примеры отчетов.
