@@ -253,5 +253,4 @@
 
 ### [Практическая работа 2.1 Разработка и тестирование dbt-моделей для бизнес-логики](https://github.com/BosenkoTM/Data-Engineering-Platforms/tree/master/modules/Module04/superstore_dwh)
 
-### Практическая работа 2.2 Создание полного dbt-проекта для преобразования сырых данных в аналитические витрины  
-[Ссылка на работу будет добавлена] 
+### [Практическая работа 2.2 Создание полного dbt-проекта для преобразования сырых данных в аналитические витрины](https://github.com/BosenkoTM/Data-Engineering-Platforms/tree/master/modules/Module04/superstore_dwh_advanced) 
