@@ -1,208 +1,224 @@
-# Модуль 3. Визуализация данных, дашборды и отчетность - Business Intelligence.
+Конечно, вот полностью переработанная и дополненная лекция в разметке GitHub.
+
+---
+
+````markdown
+# Модуль 3. Business Intelligence: Визуализация данных, дашборды и отчетность
 
 [Обратно в содержание курса :leftwards_arrow_with_hook:](https://github.com/BosenkoTM/Data-Engineering-Platforms/tree/master?tab=readme-ov-file#%D0%BF%D0%BB%D0%B0%D1%82%D1%84%D0%BE%D1%80%D0%BC%D1%8B-data-engineering) 
 
-В 3-ем модуле вы узнаете про системы Business Intelligence. Рассмотрим примеры из реальной жизни, популярные инструменты BI - Tableau, Power BI и другие. Научимся создавать отчетность и поговорим про лучшие практики визуализации данных и ее применении для пользы бизнеса.
+В этом модуле мы погрузимся в мир **Business Intelligence (BI)** — ключевой дисциплины на стыке бизнеса, аналитики и Data Engineering. Мы разберем, как превращать сырые данные в значимые инсайты с помощью современных BI-платформ, научимся создавать интерактивные дашборды и освоим лучшие практики визуализации данных для принятия эффективных бизнес-решений.
 
+## 3.1 Введение в Business Intelligence (BI)
 
-## 3.1 Введение 
+**Видео лекция** - [Введение в модуль](https://youtu.be/sj2qRK7NRMQ) 
 
-**Видео лекция** - [Введение](https://youtu.be/sj2qRK7NRMQ) 
-
-## 3.2 Что такое Business Intelligence (BI)
+### 3.1.1 Что такое Business Intelligence?
 
 **Видео лекция - теория** - [Что такое BI?](https://youtu.be/8dcISZnrlcw) 
 
+**Business Intelligence (BI)** — это не просто создание отчетов. Это комплексный, итеративный процесс, который включает в себя технологии, архитектуру и практики для сбора, анализа и представления бизнес-информации. Главная цель BI — дать возможность бизнесу принимать решения не на основе интуиции, а на основе проверенных данных (*data-driven decision making*).
+
+В современном мире BI-системы являются нервной системой компании, позволяя отслеживать ключевые показатели (KPI), выявлять тренды, находить "узкие места" и открывать новые возможности для роста.
+
 <details>
 <summary> Дополнительные материалы для изучения (нажмите, чтобы развернуть)</summary>
  
-### Дополнительные материалы для изучения
-
 1. [Короткое видео - что такое BI на примере Lamoda BI Academy и SAP Business Objects](https://youtu.be/xYExt37a9Qg) (Русский)
 2. [Business Intelligence: принципы, технологии, обучение](https://habr.com/ru/post/134031/) (Русский)
-3. [Что такое BI?](https://habr.com/ru/company/navicon/blog/250875/) (Русский)
-4. [What is business intelligence? Transforming data into business insights](https://www.cio.com/article/2439504/business-intelligence-definition-and-solutions.html) (English)
-5. [What is business intelligence? Your guide to BI and why it matters](https://www.tableau.com/learn/articles/business-intelligence) (English)
-6. [Курс Data Warehousing for Business Intelligence Specialization](https://www.coursera.org/specializations/data-warehousing) (English)
-7. [Книга Hyper: Changing the way you think about, plan, and execute business intelligence for real results, real fast!](https://www.amazon.ca/Hyper-Changing-execute-business-intelligence-ebook/dp/B011MXBW96/ref=sr_1_17?crid=LHAXKU4X0H3Y&dchild=1&keywords=business+intelligence&qid=1594192470&sprefix=business+intel%2Caps%2C208&sr=8-17) (English)
+3. [What is business intelligence? Transforming data into business insights](https://www.cio.com/article/2439504/business-intelligence-definition-and-solutions.html) (English)
+4. [What is business intelligence? Your guide to BI and why it matters](https://www.tableau.com/learn/articles/business-intelligence) (English)
+5. [Курс Data Warehousing for Business Intelligence Specialization](https://www.coursera.org/specializations/data-warehousing) (English)
 </details>
 
-## 3.3 Обзор рынка решений BI
-
-**Видео лекция - теория** - [Рынок BI?](https://youtu.be/CKDGGOzYg9w) 
-
-<details>
-<summary> Дополнительные материалы для изучения (нажмите, чтобы развернуть)</summary>
-
-### Дополнительные материалы для изучения
-
-1. [Куда движется рынок BI-аналитики в 2019 году](https://habr.com/ru/post/475470/) (Русский)
-2. [Топ-10 технологических трендов в обработке данных и аналитике в 2019 году по мнению Gartner](https://habr.com/ru/company/otus/blog/457450/) (Русский)
-3. [Технические отличия BI систем (Power BI, Qlik Sense, Tableau)](https://habr.com/ru/post/444758/) (Русский)
-4. [Gartner BI отчет 2020 оригинал](https://www.tableau.com/reports/gartner) (English)
-5. [Forrester 2019 Enterprise BI Platform Wave™ Evaluations — Research Update](https://go.forrester.com/blogs/enterprise-bi-platform-waves/) (English)
-</details>
-
-## 3.4 2 Типа решений BI
+### 3.1.2 Эволюция BI: от классики к современности
 
 **Видео лекция - теория** - [2 типа решений BI?](https://youtu.be/VklEzWpFZIk) 
 
+Подходы к BI кардинально изменились за последние десятилетия. Понимание этой эволюции критически важно для выбора правильных инструментов и построения эффективных процессов.
+
+| Характеристика | Классический (Traditional) BI | Современный (Self-Service) BI |
+| :--- | :--- | :--- |
+| **Основной пользователь** | IT-специалисты, BI-разработчики | Бизнес-аналитики, менеджеры, руководители |
+| **Процесс создания отчета**| Длинный цикл: ТЗ -> Разработка в IT -> Тестирование | Быстрый и гибкий: бизнес-пользователь сам создает отчет |
+| **Инструменты** | Сложные, требующие программирования (SAP BO, Oracle BI) | Интуитивные, с drag-and-drop интерфейсом (Tableau, Power BI, Yandex DataLens)|
+| **Источник данных** | Строго регламентированные хранилища данных (DWH) | DWH, озера данных (Data Lake), облачные сервисы, Excel/CSV |
+| **Гибкость** | Низкая, отчеты статичны | Высокая, дашборды интерактивны, "drill-down" анализ |
+| **Скорость получения инсайтов**| Дни, недели, месяцы | Минуты, часы |
+
 <details>
 <summary> Дополнительные материалы для изучения (нажмите, чтобы развернуть)</summary>
  
-### Дополнительные материалы для изучения
-
 1. [Traditional vs. Self-Service BI: Analytics Alternatives Explained](https://www.softwareadvice.com/resources/traditional-bi-vs-self-service/) (English)
-2. [Презентация Tool Comparison: Enterprise BI vs Self-Service Analytics: Choosing the Best Tool for the Job](https://www.slideshare.net/senturus/tool-comparison-enterprise-bi-vs-selfservice-analytics-choosing-the-best-tool-for-the-job) (English)
+2. [Презентация Tool Comparison: Enterprise BI vs Self-Service Analytics](https://www.slideshare.net/senturus/tool-comparison-enterprise-bi-vs-selfservice-analytics-choosing-the-best-tool-for-the-job) (English)
 3. [Семь раз отмерь, один раз внедри BI инструмент](https://habr.com/ru/company/ods/blog/460807/) (Русский)
 </details>
 
-## 3.5 Ох уж эти кубы (Molap vs Rolap)
+## 3.2 Компоненты и рынок BI-решений
 
-Когда мы работаем с аналитикой мы часто слышим про кубы. Если честно, кубами и OLAP называют все в подряд без разбора, включая BI и хранилище данных. Давайте решим, что для нас OLAP куб это MOLAP, закэшированные данные в файле или in-memory, где мы используем язык MDX для работы с ними по средством Excel или BI инструмента. А все остальное пусть будет ROLAP или просто классический BI. Чем я и пользуюсь, например в Tableau. MDX я тоже не знаю и не собираюсь его использовать.
-
-
-**Видео лекция - теория** - [Ох уж эти кубы (Molap vs Rolap)](https://youtu.be/FWEQYomEbqw) 
-
-<details>
-<summary> Дополнительные материалы для изучения (нажмите, чтобы развернуть)</summary>
- 
-### Дополнительные материалы для изучения
-
-1. [Введение в многомерный анализ](https://habr.com/ru/post/126810/) (Русский)
-2. [Многомерные кубы, OLAP и MDX](https://habr.com/ru/post/66356/) (Русский)
-3. [Запуск OLAP-сервера на базе Pentaho по шагам](https://habr.com/ru/post/187782/) (Русский)
-</details>
-
-## 3.6 Из чего состоит любой BI инструмент?
-
-Мы рассматриваем Business Intelligence как класс инструментов для создания аналитического решения и коммуникации с бизнес пользователями. Существует огромное кол-во инструментов BI, но если посмотреть поближе, они все похожи и имею много общего.
-
+### 3.2.1 Из чего состоит любой BI-инструмент?
 
 **Видео лекция - теория** - [Из чего состоит любой BI инструмент?](https://youtu.be/vtGjvKjZpmU) 
 
-## 3.7 Основы визуализации данных
-Визуализация данных это неотъемлемая часть любого BI решения. Эксперты пишут книги, университеты готовят специалистов и все для того, чтобы научить нас эффективно коммуницировать данные с конечным пользователем. Каждый раз когда вы будет создавать дашборд или строить отчет, вы должны задуматься о том, как лучше рассказать историю на основе данных и какой метод визуализации использовать.
+Несмотря на многообразие BI-платформ, их архитектура и основные компоненты схожи:
+1.  **Коннекторы к данным (Data Connectors):** Модули для подключения к различным источникам: базам данных, файлам, API, облачным сервисам.
+2.  **Слой подготовки данных (Data Preparation Layer):** Инструменты для объединения (JOIN), очистки, трансформации данных и создания вычисляемых полей. В современных системах это часто называется "созданием датасета" или "моделированием данных".
+3.  **Движок обработки запросов (Query Engine):** Ядро системы, которое преобразует действия пользователя в визуальном интерфейсе в запросы к источнику данных (например, в SQL) и обрабатывает ответы.
+4.  **Слой визуализации (Visualization Layer):** Набор диаграмм, графиков, карт и таблиц, которые используются для представления данных.
+5.  **Интерактивный дашборд (Dashboard):** "Холст" для сборки визуализаций, фильтров (селекторов) и других элементов в единую аналитическую панель.
+6.  **Слой управления и безопасности (Management & Security):** Инструменты для управления доступом, публикации отчетов и совместной работы.
+
+### 3.2.2 Обзор рынка BI-решений
+
+**Видео лекция - теория** - [Рынок BI?](https://youtu.be/CKDGGOzYg9w) 
+
+Рынок BI-платформ очень динамичен. Ежегодно аналитические агентства, такие как Gartner и Forrester, публикуют отчеты, оценивающие лидеров рынка.
+*   **Мировые лидеры:** Microsoft (Power BI), Tableau (Salesforce), Qlik.
+*   **Российские решения:** Yandex DataLens, Visiology, Luxms BI, Polymatica.
+*   **Open-source и "модные" инструменты:** Superset, Metabase, Redash, Looker (Google).
+
+<details>
+<summary> Дополнительные материалы для изучения (нажмите, чтобы развернуть)</summary>
+
+1. [Технические отличия BI систем (Power BI, Qlik Sense, Tableau)](https://habr.com/ru/post/444758/) (Русский)
+2. [Gartner BI отчет 2020 оригинал](https://www.tableau.com/reports/gartner) (English)
+3. [Forrester 2019 Enterprise BI Platform Wave™ Evaluations](https://go.forrester.com/blogs/enterprise-bi-platform-waves/) (English)
+</details>
+
+## 3.3 Основы визуализации и проектирования дашбордов
+
+Визуализация данных — это не искусство, а наука и навык. Правильная визуализация позволяет быстро и точно доносить информацию, в то время как плохая может ввести в заблуждение.
 
 **Видео лекция - теория** - [Основы визуализации данных](https://youtu.be/zUpKIFFy-ok) 
 
-**Запись вебинара c Экспертом** 
-[Алгоритм проектирования дашборда / Роман Бунин](https://youtu.be/xSp5ykKcQho)
+**Запись вебинара c Экспертом** - [Алгоритм проектирования дашборда / Роман Бунин](https://youtu.be/xSp5ykKcQho)
+
+**Ключевые принципы:**
+*   **Цель превыше всего:** Каждая визуализация должна отвечать на конкретный бизнес-вопрос.
+*   **Выбирайте правильный тип графика:** Линейный — для трендов, столбчатый — для сравнения, круговой — для долей (но с осторожностью!).
+*   **Меньше — лучше:** Избегайте визуального "шума" — лишних линий, градиентов, 3D-эффектов.
+*   **Используйте цвет осмысленно:** Цвет должен не украшать, а кодировать информацию или выделять главное.
+*   **Обеспечьте контекст:** Всегда добавляйте заголовки, подписи осей и единицы измерения.
 
 <details>
-<summary>  Дополнительные материалы для изучения (нажмите, чтобы развернуть)</summary>
+<summary> Дополнительные материалы для изучения (нажмите, чтобы развернуть)</summary>
 
-1. [Вебинар DataLearn: Алгоритм Проектирования Дашборда с Романом Буниным](https://youtu.be/xSp5ykKcQho) (Русский)
-2. [10 примеров визуализации из истории](https://www.tableau.com/learn/articles/best-beautiful-data-visualization-examples) (English)
-3. [Влияние цвета на качество визуализации](https://hbr.org/2014/04/the-right-colors-make-data-easier-to-read) (English)
-4. [Хорошая визуализация должна быть скучной](https://everydayanalytics.ca/2015/10/good-data-visualization-should-be-boring.html) (English)
-5. [Курс ВШЭ - Основы анализа и визуализация данных для медиа 2019/2020](http://wiki.cs.hse.ru/%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B_%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0_%D0%B8_%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85_%D0%B4%D0%BB%D1%8F_%D0%BC%D0%B5%D0%B4%D0%B8%D0%B0_2019/2020#.D0.9C.D0.B0.D1.82.D0.B5.D1.80.D0.B8.D0.B0.D0.BB.D1.8B_.D0.BA.D1.83.D1.80.D1.81.D0.B0) (Русский)
-6. [Специализация на Coursera - Information Visualization Specialization](https://www.coursera.org/specializations/information-visualization) (English)
-7. [Курс на Coursera - Data Analysis and Presentation Skills: the PwC Approach Specialization](https://www.coursera.org/specializations/pwc-analytics) (English)
-8. [Курс на Coursera - Data Visualization with Advanced Excel](https://www.coursera.org/learn/advanced-excel) (English)
-9. [Курс на Coursera - Data Visualization and Communication with Tableau](https://www.coursera.org/learn/analytics-tableau) (English)
-10. [Как не врать с помощью статистики: основы визуализации данных](https://habr.com/ru/company/pixonic/blog/453828/) (Русский)
+1. [10 примеров визуализации из истории](https://www.tableau.com/learn/articles/best-beautiful-data-visualization-examples) (English)
+2. [Как не врать с помощью статистики: основы визуализации данных](https://habr.com/ru/company/pixonic/blog/453828/) (Русский)
+3. [Специализация на Coursera - Information Visualization Specialization](https://www.coursera.org/specializations/information-visualization) (English)
+4. [Курс на Coursera - Data Visualization and Communication with Tableau](https://www.coursera.org/learn/analytics-tableau) (English)
 </details>
 
+---
 
-## 3.8 Знакомство с BI Tableau Desktop
+## 3.4 Практика в BI-инструментах
+
+### 3.4.1 Глубокое погружение в Yandex DataLens
+
+**Yandex DataLens** — это облачный Self-Service BI инструмент от Яндекса, тесно интегрированный в экосистему Yandex Cloud. Он является отличным примером современной BI-платформы.
+
+#### Ключевые объекты и процесс работы:
+1.  **Подключение:** Настройка доступа к источнику (например, ClickHouse, PostgreSQL, CSV-файл).
+2.  **Датасет:** Выбор таблиц, настройка связей между ними (JOIN), создание вычисляемых полей. Это главный этап подготовки данных для анализа.
+3.  **Чарт:** Создание отдельной визуализации (графика, таблицы, индикатора) на основе датасета.
+4.  **Дашборд:** Сборка нескольких чартов и селекторов (фильтров) на одной интерактивной странице.
+
+#### Практическая работа 3.1
+ - [Проектирование и настройка дашборда для бизнес-пользователей](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/modules/Module03/pw_3_1_2025.md)
+
+### 3.4.2 Знакомство с Tableau
 
 **Видео лекция - теория** - [Знакомство с Tableau Desktop](https://youtu.be/QY1FYMnxElw) 
 
 **Видео лекция - практика** - [Демонстрация Tableau Desktop](https://youtu.be/QY1FYMnxElw?t=2710) 
 
-**Запись вебинара c Экспертом** 
-[АДАПТИВНАЯ ВЕРСТКА ДАШБОРДОВ В ТАБЛО / РОМАН БУНИН](https://youtu.be/GE1czOiI-8o)
+**Tableau** — один из мировых лидеров на рынке BI. Его сильные стороны — мощный движок визуализации, гибкость и огромное сообщество пользователей.
 
 <details>
-<summary> Дополнительные материалы для изучения (нажмите, чтобы развернуть)</summary>
+<summary> Дополнительные материалы по Tableau (нажмите, чтобы развернуть)</summary>
 
 1. [Tableau Tutorial](https://help.tableau.com/current/guides/get-started-tutorial/en-us/get-started-tutorial-home.htm) (English)
-2. [Как создать Sparkline в Tableau](https://www.vizwiz.com/2015/09/kpisandsparklines.html) (English)
-3. [Обзор 43 графика за 50 минут](https://www.vizwiz.com/2017/10/43-charts-in-50-minutes.html) (English)
-4. [Шаблон 5 дашбордов](http://duelingdata.blogspot.com/2019/01/5-types-of-dashboards.html) (English)
-5. [Курс на Coursera - Data Visualization and Communication with Tableau](https://www.coursera.org/learn/analytics-tableau) (English)
-6. [Примеры работ в Tableau - Tableau Zen Мастером](https://photos.google.com/share/AF1QipPtbvxIRuoBESlPztSPTsryjD0ehd8SmpLBHp4aKdpUu0vcVqLZZP81DH1uzoRzKA?key=THpkYTRRT2JKU1ZVQzJBdTh4UDF6T3FoWVB0MUVn) (English)
-7. [Соревнования по Tableau - Iron Viz](https://www.tableau.com/iron-viz) (English)
-8. [Как создать Sankey график](https://www.flerlagetwins.com/2018/04/sankey-template.html) (English)
+2. [Примеры работ в Tableau - Tableau Zen Мастером](https://photos.google.com/share/AF1QipPtbvxIRuoBESlPztSPTsryjD0ehd8SmpLBHp4aKdpUu0vcVqLZZP81DH1uzoRzKA?key=THpkYTRRT2JKU1ZVQzJBdTh4UDF6T3FoWVB0MUVn) (English)
+3. [Соревнования по Tableau - Iron Viz](https://www.tableau.com/iron-viz) (English)
 </details>
 
-### Практическая работа 3.1 Проектирование и настройка дашборда для бизнес-пользователей.
-
- - [Условие задания](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/modules/Module03/pw_3_1_2025.md)
-
-## 3.9 Знакомство с Power BI
-
-[Эдгар Лакшин](https://www.linkedin.com/in/edgar-lakshin-b9386b22/) записал для вас интересную лекцию по Power BI, где вы можете познакомиться с этим BI инструментом.
+### 3.4.3 Знакомство с Power BI
 
 **Видео лекция - теория** - [Знакомство с Power BI](https://youtu.be/6no5xbpF3_o) 
 
 **Видео лекция - практика** - [Демонстрация Power BI](https://youtu.be/6no5xbpF3_o?t=524)
 
-<details>
-<summary> Дополнительные материалы для изучения (нажмите, чтобы развернуть)</summary>
- 
-### Дополнительные материалы для изучения
+**Power BI** от Microsoft — главный конкурент Tableau. Его преимущества — глубокая интеграция с продуктами Microsoft (Excel, Azure, SQL Server) и доступная модель лицензирования.
 
+<details>
+<summary> Дополнительные материалы по Power BI (нажмите, чтобы развернуть)</summary>
+ 
 1. [Что такое Power BI от Microsoft](https://powerbi.microsoft.com/ru-ru/what-is-power-bi/) (Русский)
 2. [Официальная документация про Power BI](https://docs.microsoft.com/ru-ru/power-bi/guidance/) (Русский)
 3. [Самый крутой YouTube канал про Power BI - Guy in a Cube](https://www.youtube.com/channel/UCFp1vaKzpfvoGai0vE5VJ0w) (English)
 </details>
 
-## 3.10 BI опросы или как управлять клиентским опытом BI пользователей
+## 3.5 Будущее BI: Искусственный интеллект и новые парадигмы
 
-Один из главных принцип лидерства ([Leadership Principles](https://www.amazon.jobs/en/principles)) в Амазон - Любовь к Клиентам (Customer Obsession). Да и не только у Амазона, многие компании являются клиентоориентированными. 
+### 3.5.1 Использование ИИ в системах BI
 
-Когда мы внедряем или сопровождаем аналитическое решение, мы тоже должны быть customer obsession. Только для нас клиенты - это пользователи BI решения. Лучший способ узнать у коллег - провести опрос и визуализировать результат. Таким образом вы сможете собрать обратную связь, быть проактивным и приоритизировать или выявить ключевые проблемы у ваших пользователей, которые вы сможете решить. Таким образом, вы повысите клиентский опыт и у вас будет, что рассказать вашему руководителю или другой компании на собеседовании. ;)
+Современные BI-платформы активно внедряют технологии искусственного интеллекта (AI) и машинного обучения (ML), что выводит аналитику на новый уровень. Этот тренд часто называют **Augmented Analytics** (Расширенная аналитика).
 
-**Видео лекция - теория** - [ Voice of Customers (опросы  пользователей аналитического решения)](https://youtu.be/kKI5PMVC6A4) 
+*   **Natural Language Query (NLQ):** Возможность задавать вопросы к данным на естественном языке. Пользователь пишет "Покажи продажи по категориям за прошлый месяц", а система сама строит нужный график. (Пример: "Ask Data" в Tableau, Q&A в Power BI).
+*   **Automated Insights:** Автоматический поиск аномалий, трендов и корреляций в данных. Система сама подсвечивает пользователю "Продажи в регионе N резко упали на 20% на прошлой неделе".
+*   **Predictive Analytics:** Встроенные функции для прогнозирования временных рядов (forecast) и кластеризации данных без необходимости писать код на Python/R.
+*   **Data Storytelling:** Автоматическая генерация текстовых описаний и выводов на основе визуализаций, что помогает быстрее понять суть данных.
 
-### Дополнительные материалы для изучения
-
-1. [Визуализацию опросов в Tableau](https://www.datarevelations.com/visualizing-survey-data/) (English)
-2. [How to measure Customer Satisfaction](https://blog.hubspot.com/service/how-to-measure-customer-satisfaction) (English)
-</details>
-
-### Лабораторная работа 3.1 Создание интерактивного аналитического дашборда на основе витрин данных
-
-- [Условие задания](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/modules/Module03/lw_3_1_2025.md)
-
-
-### 3.10 Требования к BI разработчику/инженеру
-
-Мы уже изучили достаточно, чтобы перейти к более серьезным шагам. То есть 3х модулей, который вы могли пройти будет достаточно, чтобы найти работу BI разработчика. Мы говорили про много вещей - BI, SQL, базы данных, задачи аналитики и BI разработчика, посмотрели примеры решений. Так же я вам давал много вспомогательных материалов, чтобы у вас нарисовалась картинка - кто такой BI разработчик и какие у него обязанности. Инструмент BI это уже 2ой приоритет. В этом видео я поделюсь с вами очень ценной и полезной информацией, на базе своего 10ти летнего опыта в индустрии. Сам я проходил много собеседований по всему миру и так же собеседовал много людей для Амазона.
-
-**Видео лекция - теория** - [Требования к BI разработчику](https://youtu.be/DxRTAqpjowY) 
-
-
-<details>
-<summary> Дополнительные материалы для изучения (нажмите, чтобы развернуть)</summary>
- 
-### Дополнительные материалы для изучения
-
-1. [Indeed Worldwide](https://youtu.be/DxRTAqpjowY) (English)
-2. [Методика STAR для прохождения структурированных собеседований](https://hr-portal.ru/story/metodika-star-dlya-prohozhdeniya-strukturirovannyh-sobesedovaniy) (Русский)
-3. [О собеседовании в Амазон](https://medium.com/@allo/%D0%BE-%D1%81%D0%BE%D0%B1%D0%B5%D1%81%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B8-%D0%B2-%D0%B0%D0%BC%D0%B0%D0%B7%D0%BE%D0%BD-27e649323c4b) (Русский)
-</details>
-
-## 3.13 Обзор "модных" решений для визуализации и отчетности (Fancy BI tools)
-
-На рынке существует огромное количество BI инструментов. В модуле 3 мы уже познакомились с лидерами индустрии и попробовали их в деле. Так же мы попробовали разные сервисы для визуализации. А теперь, чтобы полностью закрыть тему Business Intelligence, я хочу вас познакомить еще с рядом интересных BI решений, которые активно используются на западе. 
+### 3.5.2 "Модные" BI-решения и новые подходы
 
 **Видео лекция - теория** - [Fancy BI tools](https://youtu.be/GEl6NNpnZYQ)
 
-<details>
-<summary> Дополнительные материалы для изучения (нажмите, чтобы развернуть)</summary>
- 
-### Дополнительные материалы для изучения
-Вы может посмотреть примеры решений и даже попробовать скачать и подключиться к существующей базе данных Postgres или файлику с данными.
+Помимо "большой тройки", существует множество инновационных инструментов, которые продвигают новые подходы к BI:
+*   **Looker (Google):** Продвигает парадигму **BI-as-Code** с использованием языка LookML для создания централизованной и переиспользуемой модели данных.
+*   **ThoughtSpot:** Фокусируется на поиске по данным (*search-driven analytics*), развивая идеи NLQ.
+*   **Sigma Computing:** Предоставляет интерфейс, похожий на Excel, для работы с миллиардами строк в облачных хранилищах данных, ориентируясь на бизнес-пользователей.
+*   **Plotly/Dash, Streamlit:** Фреймворки для создания кастомных аналитических веб-приложений на Python, стирая грань между BI и Data Science.
 
+<details>
+<summary> Дополнительные материалы (нажмите, чтобы развернуть)</summary>
+ 
 1. [Looker](https://looker.com/)
 2. [Sigma BI](https://www.sigmacomputing.com/)
-3. [Mode](https://mode.com/)
+3. [ThoughtSpot](https://www.thoughtspot.com/)
 4. [Plotly and Dash](https://plotly.com/)
 5. [Redash](https://redash.io/)
-6. [Chartio](https://chartio.com/)
-7. [ThoughtSpot](https://www.thoughtspot.com/)
 </details>
 
+## 3.6 Карьера в BI и сбор обратной связи
+
+### 3.6.1 Требования к BI-разработчику/инженеру
+
+**Видео лекция - теория** - [Требования к BI разработчику](https://youtu.be/DxRTAqpjowY) 
+
+Современный BI-специалист — это не просто "человек, который рисует графики". Это аналитик с сильными техническими навыками.
+*   **Hard Skills:**
+    *   **SQL:** Беглое владение SQL — абсолютная необходимость.
+    *   **BI-инструменты:** Глубокое знание одной или нескольких платформ (Tableau, Power BI, DataLens и т.д.).
+    *   **Моделирование данных:** Понимание принципов построения хранилищ данных (звезды, снежинки).
+    *   **Python (все чаще):** Для автоматизации, сложной обработки данных и интеграции с ML.
+*   **Soft Skills:**
+    *   **Понимание бизнеса:** Умение говорить на языке бизнеса и понимать его потребности.
+    *   **Коммуникация и сторителлинг:** Способность не просто показать данные, а рассказать историю на их основе.
+    *   **Критическое мышление:** Умение задавать правильные вопросы к данным и бизнесу.
+
+<details>
+<summary> Дополнительные материалы (нажмите, чтобы развернуть)</summary>
+ 
+1. [Методика STAR для прохождения структурированных собеседований](https://hr-portal.ru/story/metodika-star-dlya-prohozhdeniya-strukturirovannyh-sobesedovaniy) (Русский)
+2. [О собеседовании в Амазон](https://medium.com/@allo/%D0%BE-%D1%81%D0%BE%D0%B1%D0%B5%D1%81%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B8-%D0%B2-%D0%B0%D0%BC%D0%B0%D0%B7%D0%BE%D0%BD-27e649323c4b) (Русский)
+</details>
+
+### 3.6.2 Управление клиентским опытом BI-пользователей
+
+**Видео лекция - теория** - [Voice of Customers (опросы пользователей аналитического решения)](https://youtu.be/kKI5PMVC6A4) 
+
+Работа BI-разработчика не заканчивается после сдачи дашборда. Важно постоянно собирать обратную связь от пользователей, чтобы понимать, насколько решение полезно, удобно и какие проблемы оно решает. Проведение опросов среди пользователей — отличный инструмент для этого.
+
+#### Лабораторная работа 3.1
+- [Создание интерактивного аналитического дашборда на основе витрин данных](https://github.com/BosenkoTM/Data-Engineering-Platforms/blob/master/modules/Module03/lw_3_1_2025.md)
+````
