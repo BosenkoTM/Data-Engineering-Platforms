@@ -1,4 +1,4 @@
-# Модуль 3. Business Intelligence: Визуализация данных, дашборды и отчетность
+# Модуль 3. Business Intelligence. Визуализация данных, дашборды и отчетность
 
 [Обратно в содержание курса :leftwards_arrow_with_hook:](https://github.com/BosenkoTM/Data-Engineering-Platforms/tree/master?tab=readme-ov-file#%D0%BF%D0%BB%D0%B0%D1%82%D1%84%D0%BE%D1%80%D0%BC%D1%8B-data-engineering) 
 
