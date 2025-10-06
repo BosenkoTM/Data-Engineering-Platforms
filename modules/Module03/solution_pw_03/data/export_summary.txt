@@ -1,0 +1,22 @@
+СВОДНЫЙ ОТЧЕТ ПО ЭКСПОРТУ ДАННЫХ
+==================================================
+Дата экспорта: 2025-10-06 17:05:09
+
+Файл: monthly_sales.csv
+  Записей: 591
+  Колонок: 11
+  Размер файла: 53.2 KB
+  Колонки: sales_month, category, segment, total_sales, total_profit, profit_margin, number_of_orders, year, month, sales_month_name, profitability_category
+
+Файл: customer_ltv.csv
+  Записей: 993
+  Колонок: 13
+  Размер файла: 118.8 KB
+  Колонки: customer_id, customer_name, segment, first_order_date, last_order_date, number_of_orders, total_sales_lifetime, average_order_value, customer_age_days, first_order_year, last_order_year, ltv_category, order_frequency_category
+
+Файл: dormant_customers.csv
+  Записей: 249
+  Колонок: 21
+  Размер файла: 54.8 KB
+  Колонки: customer_id, customer_name, segment, city, state, total_orders, total_sales, total_profit, avg_order_value, first_order_date, last_order_date, days_since_last_order, total_quantity, avg_discount, sales_percentile, customer_status, dormant_period_category, recovery_priority, profit_margin_percent, discount_category, dormant_category
+
