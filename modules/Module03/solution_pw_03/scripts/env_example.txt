@@ -1,0 +1,35 @@
+# Пример файла конфигурации для скрипта экспорта данных
+# Скопируйте этот файл в .env и заполните реальными значениями
+
+# Настройки базы данных PostgreSQL
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=superstore
+DB_USER=postgres
+DB_PASSWORD=post1616!
+DB_SCHEMA=public_dw_test
+
+# Окружение (development, production, testing)
+ENVIRONMENT=development
+
+# Настройки экспорта
+EXPORT_ENCODING=utf-8
+EXPORT_DATE_FORMAT=%Y-%m-%d
+EXPORT_DECIMAL_SEPARATOR=.
+EXPORT_THOUSANDS_SEPARATOR=,
+
+# Настройки логирования
+LOG_LEVEL=INFO
+LOG_FILE=export_log.txt
+
+# Настройки DataLens
+DATALENS_MAX_FILE_SIZE_MB=100
+DATALENS_MAX_ROWS=1000000
+
+# Дополнительные настройки
+ENABLE_EMAIL_NOTIFICATIONS=false
+EMAIL_SMTP_SERVER=smtp.gmail.com
+EMAIL_SMTP_PORT=587
+EMAIL_USERNAME=your_email@gmail.com
+EMAIL_PASSWORD=your_email_password
+EMAIL_TO=admin@company.com
