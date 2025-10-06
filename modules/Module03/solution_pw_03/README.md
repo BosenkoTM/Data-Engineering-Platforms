@@ -246,6 +246,24 @@ datalens_solution/
 - [Обучение DataLens](https://yandex.cloud/ru/training/datalens)
 - [10 правил дизайна дашбордов](https://leftjoin.ru/blog/dataviz/10-rules-for-better-dashboard-design/)
 
+
+## ⬇️ Скачать каталог Module03 из GitHub (Ubuntu)
+
+###  Git sparse-checkout (Git ≥ 2.25)
+
+```bash
+sudo apt update && sudo apt install -y git
+git clone --depth=1 --filter=blob:none --no-checkout https://github.com/BosenkoTM/Data-Engineering-Platforms.git
+cd Data-Engineering-Platforms
+git sparse-checkout init --cone
+git sparse-checkout set modules/Module03
+git checkout master
+```
+
+После выполнения у вас будет каталог `modules/Module03`.
+
+Этот способ удобен, если не хотите работать со всем Git-репозиторием.
+
 ## 📝 Лицензия
 
 Данный проект создан в образовательных целях в рамках курса "Платформы инженерии данных".
@@ -254,4 +272,5 @@ datalens_solution/
  
 **Дата создания:** 2025  
 **Версия:** 1.0
+
 
