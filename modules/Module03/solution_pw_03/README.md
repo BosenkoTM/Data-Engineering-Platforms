@@ -187,7 +187,7 @@ datalens_solution/
    - Импортируйте бэкап: `data/public_dw_test` (pg_restore/psql)
    - Либо выполните сборку DWH: `data/from_stg_to_dw.sql`
 2. Убедитесь, что доступны витрины (`public_dw_test.mart_*`)
-3. Запустите экспорт: `python scripts/export_to_csv.py`
+3. Запустите экспорт: `python3 scripts/export_to_csv.py`
 4. Проверьте CSV файлы в папке `data/`
 
 ### Шаг 2: Настройка DataLens
@@ -272,5 +272,6 @@ git checkout master
  
 **Дата создания:** 2025  
 **Версия:** 1.0
+
 
 
