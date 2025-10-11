@@ -699,44 +699,8 @@ dbt docs serve
 # - Тесты и их результаты
 ```
 
-## Устранение неполадок
 
-### Проблема: Ошибка подключения к базе данных
-
-```bash
-# Проверьте настройки в profiles.yml
-dbt debug
-
-# Убедитесь, что PostgreSQL запущен
-sudo systemctl status postgresql
-
-# Проверьте подключение вручную
-psql -h localhost -U postgres -d superstore
-```
-
-### Проблема: Модели не находят зависимости
-
-```bash
-# Проверьте, что все базовые модели из предыдущей работы существуют
-# Убедитесь, что схемы stg и dw_test содержат необходимые таблицы
-
-# Запустите модели по порядку
-dbt run --select staging
-dbt run --select intermediate
-dbt run --select marts
-```
-
-### Проблема: Тесты не проходят
-
-```bash
-# Запустите тесты с подробным выводом
-dbt test --verbose
-
-# Проверьте данные вручную
-psql -h localhost -U postgres -d superstore -c "SELECT * FROM dw_test.mart_monthly_sales WHERE total_sales < 0;"
-```
-
-### Проблема: Ошибки парсинга dbt
+### Проблема. Ошибки парсинга dbt
 
 ```bash
 # Очистите кэш dbt
@@ -747,27 +711,6 @@ rm -rf target/
 
 # Перезапустите парсинг
 dbt parse
-```
-
-### Проблема: Ошибки в exposures.yml
-
-```bash
-# Проверьте синтаксис YAML
-cat models/marts/exposures.yml
-
-# Убедитесь, что все типы корректны (dashboard, notebook, analysis, ml, application)
-# Исправьте тип 'report' на 'dashboard'
-```
-
-### Проблема: Ошибки в schema.yml
-
-```bash
-# Проверьте синтаксис тестов
-# Для dbt 1.10+ используйте arguments: для generic тестов
-# Пример:
-# - accepted_values:
-#     arguments:
-#       values: ['value1', 'value2']
 ```
 
 ## Решение проблем с помощью Cursor или AI-агентов
@@ -823,35 +766,11 @@ dbt test --verbose
 # "Как оптимизировать dbt модель int_sales_orders для лучшей производительности?"
 ```
 
-### 3. Типичные проблемы и решения
 
-#### Проблема: "Model 'X' depends on a node named 'Y' which was not found"
-```bash
-# Решение:
-# 1. Проверьте, что модель Y существует
-# 2. Убедитесь, что используете правильный синтаксис ref() или source()
-# 3. Проверьте, что модель Y в правильной схеме
-```
-
-#### Проблема: "Invalid exposures config"
-```bash
-# Решение:
-# 1. Проверьте синтаксис YAML
-# 2. Убедитесь, что тип exposure корректен
-# 3. Проверьте отступы в файле
-```
-
-#### Проблема: "Deprecated functionality"
-```bash
-# Решение:
-# 1. Обновите синтаксис тестов
-# 2. Используйте arguments: для generic тестов
-# 3. Проверьте документацию dbt для новых версий
-```
 
 ## Полная пошаговая инструкция от копирования репозитория до публикации
 
-### Шаг 1: Копирование репозитория
+### Шаг 1. Копирование репозитория
 
 ```bash
 # Клонируйте репозиторий
@@ -863,7 +782,7 @@ unzip main.zip
 mv superstore_dwh_advanced-main superstore_dwh_advanced
 ```
 
-### Шаг 2: Настройка окружения
+### Шаг 2. Настройка окружения
 
 ```bash
 # Создайте виртуальное окружение
@@ -876,7 +795,7 @@ source dbt-env/bin/activate
 pip install dbt-postgres
 ```
 
-### Шаг 3: Настройка базы данных
+### Шаг 3. Настройка базы данных
 
 ```bash
 # Подключитесь к PostgreSQL
@@ -892,7 +811,7 @@ CREATE SCHEMA IF NOT EXISTS dw_intermediate;
 CREATE SCHEMA IF NOT EXISTS dw_snapshots;
 ```
 
-### Шаг 4: Настройка проекта
+### Шаг 4. Настройка проекта
 
 ```bash
 # Перейдите в каталог проекта
@@ -905,7 +824,7 @@ cp profiles.yml ~/.dbt/profiles.yml
 dbt debug
 ```
 
-### Шаг 5: Загрузка исходных данных
+### Шаг 5. Загрузка исходных данных
 
 ```bash
 # Убедитесь, что у вас есть данные в схеме dw_test
@@ -915,7 +834,7 @@ dbt debug
 psql -h localhost -U postgres -d superstore -c "\dt dw_test.*"
 ```
 
-### Шаг 6: Запуск проекта
+### Шаг 6. Запуск проекта
 
 ```bash
 # Очистите кэш
@@ -934,7 +853,7 @@ dbt test
 dbt snapshot
 ```
 
-### Шаг 7: Проверка результатов
+### Шаг 7. Проверка результатов
 
 ```bash
 # Проверьте созданные таблицы
@@ -946,7 +865,7 @@ psql -h localhost -U postgres -d superstore -c "\dt dw_snapshots.*"
 psql -h localhost -U postgres -d superstore -c "SELECT COUNT(*) FROM dw_test.mart_monthly_sales;"
 ```
 
-### Шаг 8: Генерация документации
+### Шаг 8. Генерация документации
 
 ```bash
 # Сгенерируйте документацию
@@ -958,43 +877,6 @@ dbt docs serve
 # Откройте браузер: http://localhost:8080
 ```
 
-### Шаг 9: Публикация в dbt Cloud (опционально)
-
-```bash
-# 1. Зарегистрируйтесь на dbt Cloud
-# 2. Создайте новый проект
-# 3. Подключите репозиторий GitHub
-# 4. Настройте подключение к базе данных
-# 5. Запустите проект в dbt Cloud
-```
-
-### Шаг 10: Настройка CI/CD
-
-```bash
-# Создайте .github/workflows/dbt.yml
-cat > .github/workflows/dbt.yml << 'EOF'
-name: dbt CI/CD
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
-  dbt:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.8'
-    - name: Install dbt
-      run: pip install dbt-postgres
-    - name: Run dbt
-      run: dbt run
-EOF
-```
 
 ## Перезапуск проекта
 
@@ -1016,29 +898,6 @@ dbt docs generate
 dbt docs serve
 ```
 
-### Перезапуск после изменений:
-
-```bash
-# 1. Очистите кэш
-dbt clean
-
-# 2. Запустите только измененные модели
-dbt run --select state:modified+
-
-# 3. Запустите тесты для измененных моделей
-dbt test --select state:modified+
-```
-
-### Перезапуск конкретной модели:
-
-```bash
-# Запустите конкретную модель и все ее зависимости
-dbt run --select +mart_monthly_sales+
-
-# Запустите тесты для конкретной модели
-dbt test --select mart_monthly_sales
-```
-
 ## Пример индивидуального задания
 
 **Задача**. Создать mart-модель `mart_valuable_dormant_customers` для определения "спящих" ценных клиентов.
@@ -1046,6 +905,7 @@ dbt test --select mart_monthly_sales
 **Бизнес-кейс**. Определить клиентов из топ-25% по общей выручке, которые не совершали покупок последние 6 месяцев.
 
 **Решение**. Модель использует промежуточную модель `int_orders_pivoted` и применяет оконные функции для ранжирования клиентов по выручке, затем фильтрует тех, кто не совершал покупки последние 6 месяцев.
+
 
 
 
