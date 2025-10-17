@@ -1,6 +1,6 @@
 # Аналитика и инженерия данных в облаке: от архитектуры до оркестрации
 
-Этот документ рассматривает современные подходы к построению аналитических систем в облаке, фокусируясь на ключевых трендах, архитектурах и роли Cloud Composer (Apache Airflow) в автоматизации конвейеров данных.
+Рассмотриваются современные подходы к построению аналитических систем в облаке, фокусируясь на ключевых трендах, архитектурах и роли Cloud Composer (Apache Airflow) в автоматизации конвейеров данных.
 
 ## 1. Cloud Computing для аналитиков: тренды и архитектуры
 
@@ -79,4 +79,5 @@
 2.  [Документация Google Cloud Composer](https://cloud.google.com/composer/docs)
 3.  [Документация по партиционированным таблицам в BigQuery](https://cloud.google.com/bigquery/docs/partitioned-tables)
 4.  [Airflow Datasets (Data-aware scheduling)](https://airflow.apache.org/docs/apache-airflow/stable/concepts/datasets.html)
+
 
