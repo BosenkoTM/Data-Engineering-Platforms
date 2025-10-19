@@ -1,0 +1,15 @@
+quality_management:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: "your-gcp-project-id"
+      dataset: "dbt_transformed"
+      location: "US"
+      keyfile: "/home/airflow/gcs/dags/dbt/service-account-key.json"
+      threads: 4
+      timeout_seconds: 300
+      priority: interactive
+      retries: 1
+      maximum_bytes_billed: 1000000000
