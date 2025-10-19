@@ -1,0 +1,18 @@
+quality_management_external:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('AIRFLOW_CONN_EXTERNAL_POSTGRES_HOST', 'postgres16') }}"
+      user: "{{ env_var('AIRFLOW_CONN_EXTERNAL_POSTGRES_USER', 'postgres') }}"
+      password: "{{ env_var('AIRFLOW_CONN_EXTERNAL_POSTGRES_PASSWORD', 'post1616!') }}"
+      port: "{{ env_var('AIRFLOW_CONN_EXTERNAL_POSTGRES_PORT', '5432') | as_number }}"
+      dbname: "{{ env_var('AIRFLOW_CONN_EXTERNAL_POSTGRES_DBNAME', 'superstore') }}"
+      schema: marts_04
+      threads: 4
+      keepalives_idle: 0
+      connect_timeout: 30
+      retries: 1
+      # Дополнительные параметры для подключения к внешней СУБД
+      sslmode: prefer
+      application_name: dbt_external_postgres
