@@ -1,4 +1,4 @@
-# Практическая работа 4.1. Написание простого DAG в Airflow для запуска dbt-проекта
+# Пример решения ПР 4.1. Написание простого DAG в Airflow для запуска dbt-проекта
 
 ## Постановка задачи
 
@@ -767,3 +767,4 @@ ORDER BY audit_year, audit_month;
 - [Документация BigQuery](https://cloud.google.com/bigquery/docs)
 - [Документация Apache Airflow](https://airflow.apache.org/docs/)
 - [Google Cloud SDK](https://cloud.google.com/sdk/docs)
+
