@@ -118,10 +118,11 @@ mkdir plugins
 3. Создайте схему `raw_data_04`
 4. Повторите для схемы `marts_04`
 
--- Создание схем
+```sql
+  -- Создание схем
    CREATE SCHEMA IF NOT EXISTS raw_data_04;
    CREATE SCHEMA IF NOT EXISTS marts_04;
-   ```
+```
 5. Создайте таблицу в схеме `raw_data_04`:
    ```sql
    SET search_path TO raw_data_04;
@@ -343,4 +344,5 @@ rm -rf external-postgres
 ## Заключение
 
 Решение с внешним PostgreSQL обеспечивает эффективное использование существующей инфраструктуры и упрощает управление данными для проектов качества управления.
+
 
