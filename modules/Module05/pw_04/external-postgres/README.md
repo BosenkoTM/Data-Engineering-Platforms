@@ -1,5 +1,5 @@
 # Локальная разработка с внешним PostgreSQL
-
+**⚠️ ВАЖНО. Этот репозиторий предназначен для работы в VM Клон devops_dba_25.ova**
 ## Описание решения
 
 Данное решение предназначено для случаев, когда PostgreSQL уже установлен на виртуальной машине или хосте. Вместо создания нового контейнера PostgreSQL, мы подключаемся к существующей базе данных.
@@ -7,24 +7,24 @@
 ## Архитектура решения
 
 ```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Источники     │    │   MinIO         │    │   PostgreSQL    │
-│   данных        │───▶│   (Object       │───▶│   (External)     │
-│   (CSV файлы)   │    │    Storage)     │    │   Host:5432      │
-└─────────────────┘    └─────────────────┘                                                  │   Database:      │
-                                              │   superstore     │
-                                              │   Schema:        │
-                                              │   raw_data_04   │
-                                              └─────────────────┘
+┌─────────────────┐    ┌─────────────────┐     ┌─────────────────┐
+│   Источники     │    │   MinIO         │     │   PostgreSQL    │
+│   данных        │───▶│   (Object       │───▶│   (External)    │
+│   (CSV файлы)   │    │    Storage)     │     │   Host:5432     │
+└─────────────────┘    └─────────────────┘     │   Database:     │
+                                               │   superstore    │
+                                               │   Schema:       │
+                                               │   raw_data_04   │
+                                               └─────────────────┘
                                                        │
                                                        ▼
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+┌─────────────────┐    ┌─────────────────┐     ┌─────────────────┐
 │   Airflow UI    │◀───│  Apache Airflow │───▶│   PostgreSQL    │
-│   (Мониторинг)  │    │   (Docker)      │    │   Database:      │
-└─────────────────┘    └─────────────────┘    │   superstore     │
-                                │              │   Schema:        │
-                                ▼              │   marts_04       │
-                       ┌─────────────────┐    └─────────────────┘
+│   (Мониторинг)  │    │   (Docker)      │     │   Database:     │
+└─────────────────┘    └─────────────────┘     │   superstore    │
+                                │              │   Schema:       │
+                                ▼              │   marts_04      │
+                       ┌─────────────────┐     └─────────────────┘
                        │   dbt Models    │
                        │   (Local)       │
                        └─────────────────┘
@@ -118,27 +118,32 @@ mkdir plugins
 3. Создайте схему `raw_data_04`
 4. Повторите для схемы `marts_04`
 
-**Создайте таблицу в схеме raw_data_04:**
-1. Разверните схему `raw_data_04`
-2. Правой кнопкой на Tables → Create → Table
-3. **Table name**: `quality_audits`
-4. Перейдите на вкладку **Columns** и добавьте колонки:
-   - `audit_id` VARCHAR(50) PRIMARY KEY
-   - `audit_date` DATE NOT NULL
-   - `auditor_name` VARCHAR(100) NOT NULL
-   - `department` VARCHAR(50) NOT NULL
-   - `audit_type` VARCHAR(50) NOT NULL
-   - `process_name` VARCHAR(100) NOT NULL
-   - `compliance_score` INTEGER NOT NULL CHECK (compliance_score >= 0 AND compliance_score <= 100)
-   - `non_conformities_count` INTEGER NOT NULL CHECK (non_conformities_count >= 0)
-   - `critical_issues` INTEGER NOT NULL CHECK (critical_issues >= 0)
-   - `minor_issues` INTEGER NOT NULL CHECK (minor_issues >= 0)
-   - `recommendations_count` INTEGER NOT NULL CHECK (recommendations_count >= 0)
-   - `audit_status` VARCHAR(50) NOT NULL
-   - `next_audit_date` DATE NOT NULL
-   - `audit_duration_hours` INTEGER NOT NULL CHECK (audit_duration_hours > 0)
-   - `certification_level` VARCHAR(50) NOT NULL
-5. Нажмите **"Save"**
+-- Создание схем
+   CREATE SCHEMA IF NOT EXISTS raw_data_04;
+   CREATE SCHEMA IF NOT EXISTS marts_04;
+   ```
+5. Создайте таблицу в схеме `raw_data_04`:
+   ```sql
+   SET search_path TO raw_data_04;
+   
+   CREATE TABLE quality_audits (
+       audit_id VARCHAR(50) PRIMARY KEY,
+       audit_date DATE NOT NULL,
+       auditor_name VARCHAR(100) NOT NULL,
+       department VARCHAR(50) NOT NULL,
+       audit_type VARCHAR(50) NOT NULL,
+       process_name VARCHAR(100) NOT NULL,
+       compliance_score INTEGER NOT NULL CHECK (compliance_score >= 0 AND compliance_score <= 100),
+       non_conformities_count INTEGER NOT NULL CHECK (non_conformities_count >= 0),
+       critical_issues INTEGER NOT NULL CHECK (critical_issues >= 0),
+       minor_issues INTEGER NOT NULL CHECK (minor_issues >= 0),
+       recommendations_count INTEGER NOT NULL CHECK (recommendations_count >= 0),
+       audit_status VARCHAR(50) NOT NULL,
+       next_audit_date DATE NOT NULL,
+       audit_duration_hours INTEGER NOT NULL CHECK (audit_duration_hours > 0),
+       certification_level VARCHAR(50) NOT NULL
+   );
+   ```
 
 ### Шаг 4. Загрузка данных
 
@@ -208,159 +213,12 @@ docker compose up -d
 3. Нажмите **"Trigger DAG"** для запуска
 4. Проверьте файлы в MinIO Console
 
-### Шаг 10. Проверка данных
-
-**Проверьте результаты в PostgreSQL:**
-```bash
-docker compose exec postgres psql -U postgres -d superstore -c "SELECT COUNT(*) FROM marts_04.stg_quality_audits;"
-```
 
 **Проверьте файлы в MinIO:**
 - Откройте http://localhost:9001
 - Перейдите в bucket `quality-management-data`
 - Убедитесь, что созданы файлы `audit_data_*.csv` и `compliance_summary_*.csv`
 
-### Шаг 11. Остановка проекта
-
-```bash
-# Остановка всех сервисов
-docker compose down
-
-# Остановка с удалением данных
-docker compose down -v
-```
-
-### Шаг 12. Очистка проекта
-
-```bash
-# Деактивация виртуального окружения
-deactivate
-
-# Удаление виртуального окружения
-rm -rf venv
-
-# Остановка и удаление всех контейнеров и данных
-docker compose down -v
-
-# Удаление образов
-docker compose down --rmi all
-
-# Очистка неиспользуемых ресурсов Docker
-docker system prune -a
-
-# Удаление директории проекта
-cd ..
-rm -rf external-postgres
-```
-3. Убедитесь, что база данных `superstore` существует, или создайте её:
-   ```sql
-   CREATE DATABASE superstore;
-   ```
-4. Подключитесь к базе `superstore` и создайте схемы:
-   ```sql
-   \c superstore;
-   
-   -- Создание схем
-   CREATE SCHEMA IF NOT EXISTS raw_data_04;
-   CREATE SCHEMA IF NOT EXISTS marts_04;
-   ```
-5. Создайте таблицу в схеме `raw_data_04`:
-   ```sql
-   SET search_path TO raw_data_04;
-   
-   CREATE TABLE quality_audits (
-       audit_id VARCHAR(50) PRIMARY KEY,
-       audit_date DATE NOT NULL,
-       auditor_name VARCHAR(100) NOT NULL,
-       department VARCHAR(50) NOT NULL,
-       audit_type VARCHAR(50) NOT NULL,
-       process_name VARCHAR(100) NOT NULL,
-       compliance_score INTEGER NOT NULL CHECK (compliance_score >= 0 AND compliance_score <= 100),
-       non_conformities_count INTEGER NOT NULL CHECK (non_conformities_count >= 0),
-       critical_issues INTEGER NOT NULL CHECK (critical_issues >= 0),
-       minor_issues INTEGER NOT NULL CHECK (minor_issues >= 0),
-       recommendations_count INTEGER NOT NULL CHECK (recommendations_count >= 0),
-       audit_status VARCHAR(50) NOT NULL,
-       next_audit_date DATE NOT NULL,
-       audit_duration_hours INTEGER NOT NULL CHECK (audit_duration_hours > 0),
-       certification_level VARCHAR(50) NOT NULL
-   );
-   ```
-
-### Шаг 3. Запуск сервисов
-
-```bash
-# Запуск всех сервисов (кроме PostgreSQL)
-docker compose up -d
-
-# Ожидание готовности (2-3 минуты)
-docker compose logs -f airflow-init
-```
-
-**Если Airflow не запускается из-за проблем с dbt-postgres:**
-```bash
-# Остановка сервисов
-docker compose down
-
-# Повторный запуск с исправленной версией dbt
-docker compose up -d
-
-# Проверка логов
-docker compose logs -f airflow-webserver
-```
-
-### Шаг 4. Загрузка данных
-
-```bash
-# Создание виртуального окружения Python (только для загрузки данных)
-python3 -m venv venv
-source venv/bin/activate  # Linux/macOS
-# или
-venv\Scripts\activate     # Windows
-
-# Установка зависимостей для загрузки данных
-pip install pandas psycopg2-binary
-
-# Загрузка данных
-cd scripts
-python3 load_data.py
-cd ..
-
-# Деактивация виртуального окружения
-deactivate
-```
-
-### Шаг 5. Доступ к интерфейсам
-
-- **Airflow UI**: http://localhost:8080 (admin/admin)
-- **MinIO Console**: http://localhost:9001 (minioadmin/minioadmin)
-- **pgAdmin**: http://localhost:80 (используйте существующие учетные данные)
-- **PostgreSQL (данные проекта)**: контейнер postgres16:5432
-  - Пользователь: `postgres`
-  - Пароль: `post1616!`
-  - База данных: `superstore`
-  - Схемы: `raw_data_04`, `marts_04`
-- **PostgreSQL (Airflow)**: внутренний контейнер (не требует внешнего доступа)
-
-### Шаг 6. Настройка pgAdmin
-
-1. Откройте http://localhost:80 (используйте существующий pgAdmin на хосте)
-2. Войдите используя ваши существующие учетные данные
-3. Добавьте новый сервер:
-   - **Name**: External PostgreSQL
-   - **Host**: localhost (или IP адрес хоста)
-   - **Port**: 5432
-   - **Username**: postgres
-   - **Password**: post1616!
-   - **Database**: superstore
-4. Сохраните подключение
-
-### Шаг 7. Запуск DAG
-
-1. Откройте http://localhost:8080
-2. Войдите как admin/admin
-3. Найдите DAG `quality_management_dbt_external`
-4. Включите и запустите DAG
 
 ## Конфигурационные файлы
 
@@ -374,23 +232,6 @@ deactivate
 - `dbt-project/models/staging/stg_quality_audits.sql` - staging модель
 - `dags/dbt_external_dag.py` - Airflow DAG для внешнего PostgreSQL
 - `scripts/load_data.py` - скрипт загрузки данных
-
-## Проверка работы
-
-**Проверка через pgAdmin:**
-1. Откройте http://localhost:80
-2. Подключитесь к PostgreSQL серверу
-3. Проверьте базу данных `superstore` и схемы `raw_data_04`, `marts_04`
-4. В схеме `raw_data_04` выполните запрос:
-   ```sql
-   SELECT COUNT(*) as total_audits FROM raw_data_04.quality_audits;
-   ```
-5. В схеме `marts_04` проверьте таблицы после выполнения DAG
-
-**Проверка статуса всех сервисов:**
-```bash
-docker compose ps
-```
 
 ## Проверка результата работы DAG
 
@@ -502,3 +343,4 @@ rm -rf external-postgres
 ## Заключение
 
 Решение с внешним PostgreSQL обеспечивает эффективное использование существующей инфраструктуры и упрощает управление данными для проектов качества управления.
+
